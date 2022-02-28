@@ -35,6 +35,7 @@ const Container = styled.div`
 const Title = styled.h2`
   margin: 0;
   margin-bottom: 16px;
+  color: pink;
 `;
 
 const Description = styled.h4`
