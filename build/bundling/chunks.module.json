@@ -1,0 +1,75 @@
+{
+  "errors": [],
+  "warnings": [],
+  "hash": "7b6626e4f93a30363006",
+  "publicPath": "",
+  "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
+  "assetsByChunkName": {
+    "frontity": "frontity.module.js",
+    "list": "list.module.js"
+  },
+  "assets": [
+    {
+      "name": "frontity.module.js",
+      "size": 6851131,
+      "chunks": [
+        "frontity"
+      ],
+      "chunkNames": [
+        "frontity"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 48005,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "namedChunkGroups": {
+    "frontity": {
+      "chunks": [
+        "frontity"
+      ],
+      "assets": [
+        "frontity.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "frontity",
+      "files": [
+        "frontity.module.js"
+      ]
+    },
+    {
+      "id": "list",
+      "files": [
+        "list.module.js"
+      ]
+    }
+  ]
+}
