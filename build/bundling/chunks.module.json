@@ -1,7 +1,7 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "dbdb87d72360eeb5718d",
+  "hash": "ca68e61971751f810fda",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
@@ -11,7 +11,7 @@
   "assets": [
     {
       "name": "frontity.module.js",
-      "size": 6851259,
+      "size": 6850810,
       "chunks": [
         "frontity"
       ],
@@ -19,11 +19,11 @@
         "frontity"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "list.module.js",
-      "size": 48005,
+      "size": 47956,
       "chunks": [
         "list"
       ],
