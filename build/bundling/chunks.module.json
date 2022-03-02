@@ -1,19 +1,19 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "ab474f11d7ee12dcc063",
+  "hash": "d79ceefbdea8e2bb811b",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
     "frontity": [
       "frontity.module.js",
-      "frontity.cdd65d94a405ea55f2f0.hot-update.js"
+      "frontity.0d967a36b0a6892b2c3b.hot-update.js"
     ],
     "list": "list.module.js"
   },
   "assets": [
     {
-      "name": "cdd65d94a405ea55f2f0.hot-update.json",
+      "name": "0d967a36b0a6892b2c3b.hot-update.json",
       "size": 50,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "frontity.cdd65d94a405ea55f2f0.hot-update.js",
-      "size": 19139,
+      "name": "frontity.0d967a36b0a6892b2c3b.hot-update.js",
+      "size": 23215,
       "chunks": [
         "frontity"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "frontity.module.js",
-      "size": 6863784,
+      "size": 6868182,
       "chunks": [
         "frontity"
       ],
@@ -71,7 +71,7 @@
       ],
       "assets": [
         "frontity.module.js",
-        "frontity.cdd65d94a405ea55f2f0.hot-update.js"
+        "frontity.0d967a36b0a6892b2c3b.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -93,7 +93,7 @@
       "id": "frontity",
       "files": [
         "frontity.module.js",
-        "frontity.cdd65d94a405ea55f2f0.hot-update.js"
+        "frontity.0d967a36b0a6892b2c3b.hot-update.js"
       ]
     },
     {

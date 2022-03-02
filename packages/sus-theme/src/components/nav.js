@@ -2,11 +2,6 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 
 /**
- * Navigation Component
- *
- * It renders the navigation links
- */
-/**
  * One level menu (no child menus)
  */
 const Nav = ({ state }) => {

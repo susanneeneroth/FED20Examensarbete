@@ -2,7 +2,7 @@ const settings = {
   name: "frontity",
   state: {
     frontity: {
-      url: "http://localhost:10023/",
+      url: "http://localhost:10023",
       title: "Susanne Eneroth - Front End Dev",
       description: "WordPress installation for Frontity development",
     },
@@ -24,8 +24,9 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "http://localhost:10023/wp-json",
-          postsPage: "Blog",
+          url: "http://localhost:10023",
+          homepage: "/start",
+          postsPage: "/blog",
           params: {
             per_page: 10,
           },

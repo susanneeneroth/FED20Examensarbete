@@ -6,6 +6,8 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+// import Home from "./home";
+import Page from "./page";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -42,8 +44,10 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          {/* <Home when={data.isHome} /> */}
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
+          <Page when={data.isPage} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
