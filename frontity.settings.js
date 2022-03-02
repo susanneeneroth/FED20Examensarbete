@@ -2,8 +2,8 @@ const settings = {
   name: "frontity",
   state: {
     frontity: {
-      url: "https://test.frontity.org",
-      title: "Test Frontity Blog",
+      url: "http://localhost:10023/",
+      title: "Susanne Eneroth - Front End Dev",
       description: "WordPress installation for Frontity development",
     },
   },
@@ -12,12 +12,7 @@ const settings = {
       name: "sus-theme",
       state: {
         theme: {
-          menu: [
-            ["Home ", "/"],
-            ["Sample page", "/sample-page/"],
-            ["Hello world", "/hello-world/"],
-            ["About Us", "/about-us/"],
-          ],
+          menu: [],
           featured: {
             showOnList: false,
             showOnPost: false,
@@ -30,6 +25,10 @@ const settings = {
       state: {
         source: {
           api: "http://localhost:10023/wp-json",
+          postsPage: "Blog",
+          params: {
+            per_page: 10,
+          },
         },
       },
     },

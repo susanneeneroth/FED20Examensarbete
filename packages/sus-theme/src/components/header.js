@@ -21,7 +21,7 @@ const Header = ({ state }) => {
 // Connect the Header component to get access to the `state` in it's `props`
 export default connect(Header);
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 848px;
   max-width: 100%;
   box-sizing: border-box;
@@ -32,17 +32,17 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
   margin: 0;
   margin-bottom: 16px;
   color: pink;
 `;
 
-const Description = styled.h4`
+export const Description = styled.h4`
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   text-decoration: none;
 `;

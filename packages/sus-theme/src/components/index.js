@@ -66,7 +66,7 @@ const globalStyles = css`
   }
 `;
 
-const HeadContainer = styled.div`
+export const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;

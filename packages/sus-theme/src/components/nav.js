@@ -6,24 +6,63 @@ import Link from "./link";
  *
  * It renders the navigation links
  */
-const Nav = ({ state }) => (
-  <NavContainer>
-    {state.theme.menu.map(([name, link]) => {
-      // Check if the link matched the current page url
-      const data = state.source.get(state.router.link);
-      const isCurrentPage = data.route === link;
+/**
+ * One level menu (no child menus)
+ */
+const Nav = ({ state }) => {
+  const items = state.source.get(`/menu/${state.theme.menuUrl}/`).items;
+  // console.log('ITEMS:',items)
+  return (
+    <NavContainer>
+      {items.map((item) => {
+        return (
+          <NavItem key={item.ID}>
+            <Link link={item.url}>{item.title}</Link>
+          </NavItem>
+        );
+      })}
+    </NavContainer>
+  );
+};
 
-      return (
-        <NavItem key={name}>
-          {/* If link url is the current page, add `aria-current` for a11y */}
-          <Link link={link} aria-current={isCurrentPage ? "page" : undefined}>
-            {name}
-          </Link>
-        </NavItem>
-      );
-    })}
-  </NavContainer>
-);
+/**
+ * Drop down menu
+ */
+// const Nav = ({ state }) => {
+//   const items = state.source.get(`/menu/${state.theme.menuUrl}/`).items;
+//   // console.log('ITEMS:',items)
+//   return (
+//     <NavContainer>
+//       {items.map((item) => {
+//         if (!item.child_items) {
+//           return (
+//             <NavItem key={item.ID}>
+//               <Link link={item.url}>{item.title}</Link>
+//             </NavItem>
+//           );
+//         } else {
+//           const childItems = item.child_items;
+//           return (
+//             <NavItemWithChild key={item.ID}>
+//               <NavItem>
+//                 <Link link={item.url}>{item.title}</Link>
+//               </NavItem>
+//               <ChildMenu>
+//                 {childItems.map((childItem) => {
+//                   return (
+//                     <NavItem key={childItem.ID}>
+//                       <Link link={childItem.url}>{childItem.title}</Link>
+//                     </NavItem>
+//                   );
+//                 })}
+//               </ChildMenu>
+//             </NavItemWithChild>
+//           );
+//         }
+//       })}
+//     </NavContainer>
+//   );
+// };
 
 export default connect(Nav);
 
@@ -75,3 +114,16 @@ const NavItem = styled.div`
     }
   }
 `;
+
+/* Drop down child menu, need to add drop down css */
+
+// const NavItemWithChild = styled.div`
+//   background: pink;
+// `;
+
+// const ChildMenu = styled.div`
+//   left: 0;
+//   background-color: lightblue;
+//   width: 100%;
+//   z-index: 1;
+// `;
