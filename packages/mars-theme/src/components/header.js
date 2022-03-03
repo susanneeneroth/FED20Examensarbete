@@ -2,7 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
-import molnGrey from "../assets/moln_grey.png";
+import molnGrey from "../assets/moln_grey_small.png";
 
 const Header = ({ state }) => {
   const Comp = () => <img src={molnGrey} alt="Image alt" />;
@@ -13,7 +13,7 @@ const Header = ({ state }) => {
         <StyledLink link="/">
           <Title>
             <span>
-              <img src={molnGrey} />
+              <Logo src={molnGrey} />
             </span>
             {state.frontity.title}
           </Title>
@@ -56,4 +56,11 @@ export const Description = styled.h4`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+export const Logo = styled.img`
+  background-image: url(${molnGrey});
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
 `;

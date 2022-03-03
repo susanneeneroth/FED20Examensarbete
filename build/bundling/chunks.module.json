@@ -1,14 +1,11 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "499b48f1c1ec0de3f6d4",
+  "hash": "5e50a43f0f2ce8d39510",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
-    "frontity": [
-      "frontity.module.js",
-      "frontity.b3f3d27041b8e3642ae9.hot-update.js"
-    ],
+    "frontity": "frontity.module.js",
     "list": "list.module.js"
   },
   "assets": [
@@ -23,34 +20,8 @@
       "emitted": false
     },
     {
-      "name": "b3f3d27041b8e3642ae9.hot-update.json",
-      "size": 50,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "frontity.b3f3d27041b8e3642ae9.hot-update.js",
-      "size": 18354,
-      "chunks": [
-        "frontity"
-      ],
-      "chunkNames": [
-        "frontity"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "frontity.module.js",
-      "size": 6880240,
+      "size": 6884311,
       "chunks": [
         "frontity"
       ],
@@ -58,15 +29,15 @@
         "frontity"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
-      "name": "images/moln_grey.png",
-      "size": 7155,
+      "name": "images/moln_grey_small.png",
+      "size": 1027,
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/mars-theme/src/assets/moln_grey.png"
+        "sourceFilename": "packages/mars-theme/src/assets/moln_grey_small.png"
       },
       "emitted": false
     },
@@ -90,8 +61,7 @@
         "frontity"
       ],
       "assets": [
-        "frontity.module.js",
-        "frontity.b3f3d27041b8e3642ae9.hot-update.js"
+        "frontity.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -118,8 +88,7 @@
     {
       "id": "frontity",
       "files": [
-        "frontity.module.js",
-        "frontity.b3f3d27041b8e3642ae9.hot-update.js"
+        "frontity.module.js"
       ]
     },
     {
