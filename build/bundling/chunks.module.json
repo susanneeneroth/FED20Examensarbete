@@ -1,11 +1,14 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "80f1ed79d0022efd6520",
+  "hash": "499b48f1c1ec0de3f6d4",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
-    "frontity": "frontity.module.js",
+    "frontity": [
+      "frontity.module.js",
+      "frontity.b3f3d27041b8e3642ae9.hot-update.js"
+    ],
     "list": "list.module.js"
   },
   "assets": [
@@ -20,8 +23,34 @@
       "emitted": false
     },
     {
+      "name": "b3f3d27041b8e3642ae9.hot-update.json",
+      "size": 50,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "frontity.b3f3d27041b8e3642ae9.hot-update.js",
+      "size": 18354,
+      "chunks": [
+        "frontity"
+      ],
+      "chunkNames": [
+        "frontity"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "frontity.module.js",
-      "size": 6876365,
+      "size": 6880240,
       "chunks": [
         "frontity"
       ],
@@ -29,7 +58,17 @@
         "frontity"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
+    },
+    {
+      "name": "images/moln_grey.png",
+      "size": 7155,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/mars-theme/src/assets/moln_grey.png"
+      },
+      "emitted": false
     },
     {
       "name": "list.module.js",
@@ -51,7 +90,8 @@
         "frontity"
       ],
       "assets": [
-        "frontity.module.js"
+        "frontity.module.js",
+        "frontity.b3f3d27041b8e3642ae9.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -78,7 +118,8 @@
     {
       "id": "frontity",
       "files": [
-        "frontity.module.js"
+        "frontity.module.js",
+        "frontity.b3f3d27041b8e3642ae9.hot-update.js"
       ]
     },
     {

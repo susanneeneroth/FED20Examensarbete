@@ -2,13 +2,21 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
+import molnGrey from "../assets/moln_grey.png";
 
 const Header = ({ state }) => {
+  const Comp = () => <img src={molnGrey} alt="Image alt" />;
+
   return (
     <>
       <Container>
         <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
+          <Title>
+            <span>
+              <img src={molnGrey} />
+            </span>
+            {state.frontity.title}
+          </Title>
         </StyledLink>
         <Description>{state.frontity.description}</Description>
         <MobileMenu />
@@ -30,7 +38,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-family: Pacifico;
+  font-family: "Pacifico";
+  font-size: 0.8rem;
+  font-weight: thin;
 `;
 
 export const Title = styled.h2`

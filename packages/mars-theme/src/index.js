@@ -49,7 +49,11 @@ const marsTheme = {
         import("webfontloader").then((WebFontLoader) => {
           WebFontLoader.load({
             google: {
-              families: ["Pacifico:cursive", "Merriweather:400,700:latin-ext"],
+              families: [
+                "Pacifico",
+                "Merriweather:400,700:latin-ext",
+                "Sacramento",
+              ],
             },
           });
         });
