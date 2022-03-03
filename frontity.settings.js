@@ -3,13 +3,13 @@ const settings = {
   state: {
     frontity: {
       url: "http://localhost:10023",
-      title: "Susanne Eneroth - Front End Dev",
-      description: "WordPress installation for Frontity development",
+      title: "Susanne Eneroth",
+      description: "",
     },
   },
   packages: [
     {
-      name: "sus-theme",
+      name: "@frontity/mars-theme",
       state: {
         theme: {
           menu: [],
@@ -25,8 +25,8 @@ const settings = {
       state: {
         source: {
           url: "http://localhost:10023",
-          homepage: "/start",
-          postsPage: "/blog",
+          // homepage: "Start",
+          postsPage: "Blog",
           params: {
             per_page: 10,
           },
