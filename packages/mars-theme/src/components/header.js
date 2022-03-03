@@ -30,6 +30,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-family: Pacifico;
 `;
 
 export const Title = styled.h2`

@@ -45,6 +45,15 @@ const marsTheme = {
       beforeSSR: async ({ state, actions }) => {
         await actions.source.fetch(`/menu/${state.theme.menuUrl}/`);
       },
+      beforeCSR: () => {
+        import("webfontloader").then((WebFontLoader) => {
+          WebFontLoader.load({
+            google: {
+              families: ["Pacifico:cursive", "Merriweather:400,700:latin-ext"],
+            },
+          });
+        });
+      },
     },
   },
   libraries: {

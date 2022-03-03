@@ -1,46 +1,27 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "63aa8c9f23ad1b469bae",
+  "hash": "80f1ed79d0022efd6520",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
-    "frontity": [
-      "frontity.module.js",
-      "frontity.7d1acf05ae240ff05f8c.hot-update.js"
-    ],
+    "frontity": "frontity.module.js",
     "list": "list.module.js"
   },
   "assets": [
     {
-      "name": "7d1acf05ae240ff05f8c.hot-update.json",
-      "size": 50,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "frontity.7d1acf05ae240ff05f8c.hot-update.js",
-      "size": 15505,
+      "name": "0.module.js",
+      "size": 78352,
       "chunks": [
-        "frontity"
+        0
       ],
-      "chunkNames": [
-        "frontity"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
+      "chunkNames": [],
+      "info": {},
       "emitted": false
     },
     {
       "name": "frontity.module.js",
-      "size": 6874268,
+      "size": 6876365,
       "chunks": [
         "frontity"
       ],
@@ -48,7 +29,7 @@
         "frontity"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "list.module.js",
@@ -70,8 +51,7 @@
         "frontity"
       ],
       "assets": [
-        "frontity.module.js",
-        "frontity.7d1acf05ae240ff05f8c.hot-update.js"
+        "frontity.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -90,10 +70,15 @@
   "generator": "loadable-components",
   "chunks": [
     {
+      "id": 0,
+      "files": [
+        "0.module.js"
+      ]
+    },
+    {
       "id": "frontity",
       "files": [
-        "frontity.module.js",
-        "frontity.7d1acf05ae240ff05f8c.hot-update.js"
+        "frontity.module.js"
       ]
     },
     {
