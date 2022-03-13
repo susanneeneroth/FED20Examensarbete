@@ -1,5 +1,5 @@
 const settings = {
-  name: "frontity",
+  name: "fed20-exjobb",
   state: {
     frontity: {
       url: "http://localhost:10023",
@@ -9,7 +9,7 @@ const settings = {
   },
   packages: [
     {
-      name: "@frontity/mars-theme",
+      name: "exjobb-susanne-theme",
       state: {
         theme: {
           menu: [],

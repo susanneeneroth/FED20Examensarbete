@@ -1,8 +1,8 @@
 {
-  "name": "frontity",
+  "name": "exjobb-susanne-theme",
   "version": "1.0.0",
   "private": true,
-  "description": "Frontity project",
+  "description": "A graduation project for Front End Developer in Frontity",
   "keywords": [
     "frontity"
   ],
@@ -17,12 +17,15 @@
   },
   "prettier": {},
   "dependencies": {
-    "@frontity/core": "^1.15.0",
+    "@frontity/core": "^1.15.1",
     "@frontity/html2react": "^1.7.0",
-    "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
+    "exjobb-susanne-theme": "file:packages/exjobb-susanne-theme",
+    "fed20-exjobb-theme": "./packages/fed20-exjobb-theme",
     "frontity": "^1.17.2",
+    "my-package": "^0.0.0",
+    "exjobb-susanne-theme": "file:packages/exjobb-susanne-theme",
     "webfontloader": "^1.6.28"
   }
 }

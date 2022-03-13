@@ -1,54 +1,50 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "5e50a43f0f2ce8d39510",
+  "hash": "45bbe70550dccbb6770a",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
-    "frontity": "frontity.module.js",
-    "list": "list.module.js"
+    "fed20-exjobb": [
+      "fed20-exjobb.module.js",
+      "fed20-exjobb.13238c2adbe8af769561.hot-update.js"
+    ]
   },
   "assets": [
     {
-      "name": "0.module.js",
-      "size": 78352,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "frontity.module.js",
-      "size": 6884311,
-      "chunks": [
-        "frontity"
-      ],
-      "chunkNames": [
-        "frontity"
-      ],
-      "info": {},
-      "emitted": true
-    },
-    {
-      "name": "images/moln_grey_small.png",
-      "size": 1027,
+      "name": "13238c2adbe8af769561.hot-update.json",
+      "size": 54,
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/mars-theme/src/assets/moln_grey_small.png"
+        "hotModuleReplacement": true,
+        "immutable": true
       },
       "emitted": false
     },
     {
-      "name": "list.module.js",
-      "size": 48005,
+      "name": "fed20-exjobb.13238c2adbe8af769561.hot-update.js",
+      "size": 101681,
       "chunks": [
-        "list"
+        "fed20-exjobb"
       ],
       "chunkNames": [
-        "list"
+        "fed20-exjobb"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "fed20-exjobb.module.js",
+      "size": 6572275,
+      "chunks": [
+        "fed20-exjobb"
+      ],
+      "chunkNames": [
+        "fed20-exjobb"
       ],
       "info": {},
       "emitted": false
@@ -56,22 +52,13 @@
   ],
   "filteredAssets": 0,
   "namedChunkGroups": {
-    "frontity": {
+    "fed20-exjobb": {
       "chunks": [
-        "frontity"
+        "fed20-exjobb"
       ],
       "assets": [
-        "frontity.module.js"
-      ],
-      "children": {},
-      "childAssets": {}
-    },
-    "list": {
-      "chunks": [
-        "list"
-      ],
-      "assets": [
-        "list.module.js"
+        "fed20-exjobb.module.js",
+        "fed20-exjobb.13238c2adbe8af769561.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -80,21 +67,10 @@
   "generator": "loadable-components",
   "chunks": [
     {
-      "id": 0,
+      "id": "fed20-exjobb",
       "files": [
-        "0.module.js"
-      ]
-    },
-    {
-      "id": "frontity",
-      "files": [
-        "frontity.module.js"
-      ]
-    },
-    {
-      "id": "list",
-      "files": [
-        "list.module.js"
+        "fed20-exjobb.module.js",
+        "fed20-exjobb.13238c2adbe8af769561.hot-update.js"
       ]
     }
   ]
