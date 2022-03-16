@@ -21,11 +21,11 @@
     "@frontity/html2react": "^1.7.0",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
+    "dayjs": "^1.11.0",
     "exjobb-susanne-theme": "file:packages/exjobb-susanne-theme",
     "fed20-exjobb-theme": "./packages/fed20-exjobb-theme",
     "frontity": "^1.17.2",
     "my-package": "^0.0.0",
-    "exjobb-susanne-theme": "file:packages/exjobb-susanne-theme",
     "webfontloader": "^1.6.28"
   }
 }
