@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, Global, css, styled } from "frontity";
+import { connect, Global, css, styled, Head } from "frontity";
 import Nav from "../components/nav";
 import Switch from "@frontity/components/switch";
 import List from "./list";
@@ -32,6 +32,13 @@ const Root = ({ state, actions }) => {
           }
         `}
       />
+      <Head>
+        <title>Susanne Eneroth Portfolio</title>
+        <meta
+          name="description"
+          content="Susanne Eneroths portfolio made with React and WordPress"
+        />
+      </Head>
       <Header isPostType={data.isPostType} isPage={data.isPage}>
         <HeaderContent>
           <h1>Frontity Workshop</h1>

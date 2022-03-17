@@ -1,18 +1,25 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
+import post from "./post";
 
-const List = ({ state, actions }) => {
+const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
+  const Excerpt = libraries.html2react.Component;
 
   return (
     <Items>
       {data.items.map((item) => {
-        const post = state.source.post[item.id];
+        const post = state.source[item.type][item.id];
         return (
-          <Link link={post.link} key={post.id}>
-            {post.title.rendered}
-          </Link>
+          <>
+            <Link key={item.id} link={post.link}>
+              {post.title.rendered}
+              <StyledExcerpt>
+                <Excerpt html={post.excerpt.rendered} />
+              </StyledExcerpt>
+            </Link>
+          </>
         );
       })}
       <PrevNextNav>
@@ -53,6 +60,10 @@ const Items = styled.div`
   & > a:visited {
     color: black;
   }
+`;
+
+const StyledExcerpt = styled.div`
+  color: pink;
 `;
 
 const PrevNextNav = styled.div`

@@ -53,11 +53,6 @@ const exjobbSusanneTheme = {
   },
   libraries: {
     html2react: {
-      /**
-       * Add a processor to `html2react` so it processes the `<img>` tags
-       * and internal link inside the content HTML.
-       * You can add your own processors too.
-       */
       processors: [image, iframe, link],
     },
     source: {
