@@ -8,6 +8,9 @@ const settings = {
     },
   },
   packages: [
+    "@frontity/tiny-router",
+    "@frontity/wp-source",
+
     {
       name: "exjobb-susanne-theme",
       state: {
