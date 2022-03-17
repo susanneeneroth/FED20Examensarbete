@@ -5,10 +5,7 @@
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
-    "fed20-exjobb": [
-      "fed20-exjobb.module.js",
-      "fed20-exjobb.c6042f25b1cb5beeb03b.hot-update.js"
-    ]
+    "fed20-exjobb": "fed20-exjobb.module.js"
   },
   "assets": [
     {
@@ -19,32 +16,6 @@
       ],
       "chunkNames": [],
       "info": {},
-      "emitted": false
-    },
-    {
-      "name": "c6042f25b1cb5beeb03b.hot-update.json",
-      "size": 54,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "fed20-exjobb.c6042f25b1cb5beeb03b.hot-update.js",
-      "size": 34637,
-      "chunks": [
-        "fed20-exjobb"
-      ],
-      "chunkNames": [
-        "fed20-exjobb"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
       "emitted": false
     },
     {
@@ -67,8 +38,7 @@
         "fed20-exjobb"
       ],
       "assets": [
-        "fed20-exjobb.module.js",
-        "fed20-exjobb.c6042f25b1cb5beeb03b.hot-update.js"
+        "fed20-exjobb.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -85,8 +55,7 @@
     {
       "id": "fed20-exjobb",
       "files": [
-        "fed20-exjobb.module.js",
-        "fed20-exjobb.c6042f25b1cb5beeb03b.hot-update.js"
+        "fed20-exjobb.module.js"
       ]
     }
   ]
