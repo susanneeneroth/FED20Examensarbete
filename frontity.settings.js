@@ -25,7 +25,13 @@ const settings = {
       state: {
         source: {
           url: "http://localhost:10023",
-          // homepage: "Start",
+          postTypes: [
+            {
+              type: "portfolio",
+              endpoint: "portfolio",
+              archive: "/portfolio-archive",
+            },
+          ],
           postsPage: "Blog",
           params: {
             per_page: 10,
