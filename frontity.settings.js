@@ -29,7 +29,7 @@ const settings = {
             {
               type: "portfolio",
               endpoint: "portfolio",
-              archive: "/portfolio-archive",
+              // archive: "/portfolio-archive",
             },
           ],
           postsPage: "Blog",
