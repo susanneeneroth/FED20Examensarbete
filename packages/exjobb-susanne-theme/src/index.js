@@ -12,6 +12,7 @@ const exjobbSusanneTheme = {
   state: {
     theme: {
       autoPrefetch: "in-view",
+      isUrlVisible: false,
       menu: ["primary-menu"],
       menuUrl: "primary-menu",
       isMobileMenuOpen: false,
@@ -23,6 +24,9 @@ const exjobbSusanneTheme = {
   },
   actions: {
     theme: {
+      toggleUrl: ({ state }) => {
+        state.theme.isUrlVisible = !state.theme.isUrlVisible;
+      },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
       },
