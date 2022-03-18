@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import Link from "./link";
-// import Link from "@frontity/components/link";
+// import Link from "./link";
+import Link from "@frontity/components/link";
 import { css } from "frontity";
 
 const Nav = ({ state }) => {
@@ -9,6 +9,16 @@ const Nav = ({ state }) => {
 
   return (
     <Menu>
+      <Link
+        link="/"
+        css={css`
+          color: orange;
+          text-decoration: none;
+          margin-right: 1em;
+        `}
+      >
+        Home
+      </Link>
       {items.map((item) => {
         return (
           <nav key={item.ID}>

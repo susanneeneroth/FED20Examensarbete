@@ -8,9 +8,6 @@ const settings = {
     },
   },
   packages: [
-    "@frontity/tiny-router",
-    "@frontity/wp-source",
-
     {
       name: "exjobb-susanne-theme",
       state: {
@@ -35,6 +32,7 @@ const settings = {
               // archive: "/portfolio-archive",
             },
           ],
+          homePage: "Home",
           postsPage: "Blog",
           params: {
             per_page: 10,

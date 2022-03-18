@@ -2,6 +2,7 @@ import React from "react";
 import { connect, Global, css, styled, Head } from "frontity";
 import Nav from "../components/nav";
 import Switch from "@frontity/components/switch";
+import Link from "@frontity/components/link";
 import List from "./list";
 import Post from "./post";
 import Page from "./page";
