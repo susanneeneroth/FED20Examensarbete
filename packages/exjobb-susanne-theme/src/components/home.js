@@ -12,13 +12,13 @@ const Home = ({ state }) => {
   return (
     <div>
       <h1>Homepage</h1>
-      <Switch>
+      {/* <Switch>
         <Loading when={data.isFetching} />
         <Post when={data.isPost} />
         <Page when={data.isPage} />
         <Page when={data.isPortfolio} />
         <Error when={data.isError} />
-      </Switch>
+      </Switch> */}
     </div>
   );
 };

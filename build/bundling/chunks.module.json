@@ -1,13 +1,13 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "2d8f95e39ac7a2d37403",
+  "hash": "370f7bca328281c8cb02",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
     "fed20-exjobb": [
       "fed20-exjobb.module.js",
-      "fed20-exjobb.a00a69472832dd9be84b.hot-update.js"
+      "fed20-exjobb.e6bade43b7712e1dc59a.hot-update.js"
     ]
   },
   "assets": [
@@ -19,10 +19,10 @@
       ],
       "chunkNames": [],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
-      "name": "a00a69472832dd9be84b.hot-update.json",
+      "name": "e6bade43b7712e1dc59a.hot-update.json",
       "size": 54,
       "chunks": [],
       "chunkNames": [],
@@ -33,8 +33,8 @@
       "emitted": false
     },
     {
-      "name": "fed20-exjobb.a00a69472832dd9be84b.hot-update.js",
-      "size": 11806,
+      "name": "fed20-exjobb.e6bade43b7712e1dc59a.hot-update.js",
+      "size": 61116,
       "chunks": [
         "fed20-exjobb"
       ],
@@ -49,7 +49,7 @@
     },
     {
       "name": "fed20-exjobb.module.js",
-      "size": 6775611,
+      "size": 6825171,
       "chunks": [
         "fed20-exjobb"
       ],
@@ -58,6 +58,16 @@
       ],
       "info": {},
       "emitted": false
+    },
+    {
+      "name": "images/moln_grey_small.png",
+      "size": 1027,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/exjobb-susanne-theme/src/assets/moln_grey_small.png"
+      },
+      "emitted": true
     }
   ],
   "filteredAssets": 0,
@@ -68,7 +78,7 @@
       ],
       "assets": [
         "fed20-exjobb.module.js",
-        "fed20-exjobb.a00a69472832dd9be84b.hot-update.js"
+        "fed20-exjobb.e6bade43b7712e1dc59a.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -86,7 +96,7 @@
       "id": "fed20-exjobb",
       "files": [
         "fed20-exjobb.module.js",
-        "fed20-exjobb.a00a69472832dd9be84b.hot-update.js"
+        "fed20-exjobb.e6bade43b7712e1dc59a.hot-update.js"
       ]
     }
   ]
