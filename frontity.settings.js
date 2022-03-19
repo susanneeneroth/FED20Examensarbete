@@ -32,7 +32,6 @@ const settings = {
               // archive: "/portfolio-archive",
             },
           ],
-          homePage: "Home",
           postsPage: "Blog",
           params: {
             per_page: 10,

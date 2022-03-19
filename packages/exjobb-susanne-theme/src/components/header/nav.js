@@ -9,16 +9,6 @@ const Nav = ({ state }) => {
 
   return (
     <Menu>
-      <Link
-        link="/"
-        css={css`
-          color: orange;
-          text-decoration: none;
-          margin-right: 1em;
-        `}
-      >
-        Home
-      </Link>
       {items.map((item) => {
         return (
           <nav key={item.ID}>

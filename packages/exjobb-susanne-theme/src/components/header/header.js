@@ -2,7 +2,8 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../link";
 import Nav from "./nav";
-import MenuLogo from "../header/menu-logo";
+import MobileMenu from "../../components/menu";
+import MenuLogo from "../../components/menu-logo";
 
 const Header = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -23,7 +24,7 @@ const Header = ({ state }) => {
           </Menu>
         </Middle>
         <Right>Right</Right>
-        {/* <MobileMenu /> */}
+        <MobileMenu />
       </Navigation>
     </Container>
 
