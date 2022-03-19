@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
-import post from "./post";
+// import post from "./post";
 
 const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -12,14 +12,14 @@ const List = ({ state, actions, libraries }) => {
       {data.items.map((item) => {
         const post = state.source[item.type][item.id];
         return (
-          <>
+          <div key={item.id}>
             <Link key={item.id} link={post.link}>
               {post.title.rendered}
               <StyledExcerpt>
                 <Excerpt html={post.excerpt.rendered} />
               </StyledExcerpt>
             </Link>
-          </>
+          </div>
         );
       })}
       <PrevNextNav>

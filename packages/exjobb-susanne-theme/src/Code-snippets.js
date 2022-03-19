@@ -32,3 +32,19 @@
     );
   })}
 </MenuContent>;
+
+// From header.js
+//<Container isPostType={data.isPostType} isPage={data.isPage}>
+//   <LogoTitle>
+//     <span>
+//       <Logo src={molnGrey} />
+//     </span>
+//     {state.frontity.title}
+//   </LogoTitle>
+//   <HeaderContent>
+//     <h1>The exjobb - work in progress</h1>
+//     <Menu>
+//       <Nav />
+//     </Menu>
+//   </HeaderContent>
+// </Container>

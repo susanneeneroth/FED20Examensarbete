@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, Global, css, Head } from "frontity";
+import { connect, Global, css, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
 import List from "./list";
 import Post from "./post";
@@ -14,49 +14,79 @@ const Root = ({ state }) => {
 
   return (
     <>
-      <Global
-        styles={css`
-          * {
-            margin-top: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-          html {
-            font-family: system-ui, Verdana, Arial, sans-serif;
-            margin: 0;
-          }
-          body {
-            margin: 0;
-          }
-          h1 {
-            margin-top: 0;
-          }
-        `}
-      />
-      <Head>
-        <title>Susanne Eneroth Portfolio</title>
-        <meta
-          name="description"
-          content="Susanne Eneroths portfolio made with React and WordPress"
-        />
-      </Head>
-      <Header />
-      <main>
-        <Switch>
-          <Loading when={data.isFetching} />
-          <Home when={data.isHome} />
-          <List when={data.isArchive} />
-          <Post when={data.isPost} />
-          <Page when={data.isPage} />
-          <Page when={data.isPortfolio} />
-          <Error when={data.isError} />
-        </Switch>
-      </main>
+      <Container>
+        <Global styles={globalStyles} />
+        <Head>
+          <title>Susanne Eneroth Portfolio</title>
+          <meta
+            name="description"
+            content="Susanne Eneroths portfolio made with React and WordPress"
+          />
+        </Head>
+        <HeadContainer>
+          <Header />
+        </HeadContainer>
+        <Main>
+          <Switch>
+            <Loading when={data.isFetching} />
+            <Home when={data.isHome} />
+            <List when={data.isArchive} />
+            <Post when={data.isPost} />
+            <Page when={data.isPage} />
+            <Page when={data.isPortfolio} />
+            <Error when={data.isError} />
+          </Switch>
+        </Main>
+      </Container>
     </>
   );
 };
 
 export default connect(Root);
+
+const globalStyles = css`
+  html {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden; /* Temporary solution, horizontal overflow hidden because of strange margin-right built into the theme which I can't find */
+  }
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+`;
+
+const Container = styled.div`
+  width: 100vw;
+  height: auto;
+  margin: 0;
+`;
+
+const HeadContainer = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  background-color: #514f60;
+  padding: 5px 0 0 0;
+  width: 100vw;
+  height: 118px;
+`;
+
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    180deg,
+    rgba(66, 174, 228, 0.1),
+    rgba(66, 174, 228, 0)
+  );
+`;
 
 // const Button = styled.button`
 //   background: transparent;

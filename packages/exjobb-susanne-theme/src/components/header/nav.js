@@ -8,7 +8,7 @@ const Nav = ({ state }) => {
   const items = state.source.get(`/menu/${state.theme.menuUrl}/`).items;
 
   return (
-    <Menu>
+    <MenuContainer>
       {items.map((item) => {
         return (
           <nav key={item.ID}>
@@ -25,14 +25,13 @@ const Nav = ({ state }) => {
           </nav>
         );
       })}
-    </Menu>
+    </MenuContainer>
   );
 };
 
 export default connect(Nav);
 
-const Menu = styled.nav`
+const MenuContainer = styled.nav`
   display: flex;
   flex-direction: row;
-  margin-top: 1em;
 `;

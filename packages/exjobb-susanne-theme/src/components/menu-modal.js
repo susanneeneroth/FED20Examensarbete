@@ -28,10 +28,10 @@ const MenuModal = ({ state, ...props }) => {
 };
 
 const MenuOverlay = styled.div`
-  background-color: pink;
+  background-color: #514f60;
   width: 100vw;
   height: 100vh;
-  overflow: hidden hidden;
+  overflow: hidden auto;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -41,10 +41,8 @@ const MenuOverlay = styled.div`
 const MenuContent = styled.div`
   z-index: 3;
   position: relative;
-  top: 70px; /* iphone 11 */
-  right: 75vw;
-  margin: 0 auto;
-  overflow: hidden;
+  width: 100vw;
+  height: auto;
 `;
 
 const MenuLink = styled(Link)`
@@ -54,9 +52,6 @@ const MenuLink = styled(Link)`
   font-size: 20px;
   text-align: center;
   padding: 1.2rem 0;
-  color: #000;
-  text-decoration: none;
-  width: 30vw;
 
   &:hover,
   &:focus {
@@ -64,7 +59,7 @@ const MenuLink = styled(Link)`
   }
   /* styles for active link */
   &[aria-current="page"] {
-    color: black;
+    color: yellow;
     font-weight: bold;
   }
 `;

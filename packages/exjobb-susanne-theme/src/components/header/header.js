@@ -11,54 +11,46 @@ const Header = ({ state }) => {
   return (
     <Container>
       <Navigation>
-        <Left>
-          {/* <StyledLink link="/"> */}
-          <Logo>
-            <MenuLogo />
-          </Logo>
-          {/* </StyledLink> */}
-        </Left>
-        <Middle>
-          <Menu>
-            <Nav />
-          </Menu>
-        </Middle>
+        {/* <StyledLink link="/"> */}
+        <Logo>
+          <MenuLogo />
+        </Logo>
+        {/* <Title>{state.frontity.title}</Title> */}
+        {/* </StyledLink> */}
+
+        <Menu>
+          <Nav />
+        </Menu>
+
         <Right>Right</Right>
         <MobileMenu />
       </Navigation>
     </Container>
-
-    // <Container isPostType={data.isPostType} isPage={data.isPage}>
-    //   <LogoTitle>
-    //     <span>
-    //       <Logo src={molnGrey} />
-    //     </span>
-    //     {state.frontity.title}
-    //   </LogoTitle>
-    //   <HeaderContent>
-    //     <h1>The exjobb - work in progress</h1>
-    //     <Menu>
-    //       <Nav />
-    //     </Menu>
-    //   </HeaderContent>
-    // </Container>
   );
 };
 
-const Container = styled.header`
-  background-color: #ccc;
-  width: 100vw;
-  height: 200px;
-
-  h1 {
-    color: #081521;
-  }
+const Container = styled.div`
+  width: 1140px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-top: 14px;
+  color: #fff;
+  background: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Navigation = styled.div`
+  width: 1140px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-top: 14px;
+  color: #fff;
   display: flex;
-  min-height: 56px;
-  background-color: pink;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -69,13 +61,13 @@ const Left = styled.div`
 `;
 
 const Middle = styled.div`
-  flex: 1;
-  text-align: center;
+  flex: 2;
   background-color: powderblue;
+  flex-wrap: no-wrap;
 `;
 
 const Right = styled.div`
-  flex: 1;
+  /* flex: 1; */
   text-align: right;
   background-color: green;
 `;
@@ -93,37 +85,14 @@ const LogoImg = styled.img`
   height: 40px;
 `;
 
-const HeaderContent = styled.div`
-  max-width: 800px;
-  padding: 2em 1em;
-  margin: 0 auto;
-
-  h2 {
-    margin: 0.5em 0;
-  }
-  p {
-    line-height: 1.25em;
-    margin-bottom: 0.75em;
-  }
-`;
-
-const LogoTitle = styled.span`
-  margin: 0;
-  margin-bottom: 16px;
-  color: #869ba9;
-  flex: 1;
-`;
-
-// const Logo = styled.img`
-//   margin-right: 5px;
-//   position: relative;
-//   top: 2px;
+// const Title = styled.h2`
+//   margin: 0;
+//   margin-bottom: 16px;
 // `;
 
 const Menu = styled.nav`
   display: flex;
   flex-direction: row;
-  margin-top: 1em;
   & > a {
     margin-right: 1em;
     color: steelblue;
