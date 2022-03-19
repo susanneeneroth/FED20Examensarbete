@@ -54,6 +54,10 @@ const Navigation = styled.div`
 const Right = styled.div`
   /* flex: 1; */
   text-align: right;
+
+  @media (max-width: 560px) {
+    display: none;
+  }
 `;
 
 export const StyledLink = styled(Link)`

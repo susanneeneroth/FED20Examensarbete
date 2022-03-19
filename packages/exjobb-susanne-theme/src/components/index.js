@@ -8,7 +8,7 @@ import Home from "./home";
 import Loading from "./loading";
 import Error from "./error";
 import Header from "./header/header";
-// import WebFont from "webfontloader";
+import Footer from "./footer";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -38,6 +38,7 @@ const Root = ({ state }) => {
             <Error when={data.isError} />
           </Switch>
         </Main>
+        <Footer />
       </Container>
     </>
   );
@@ -53,7 +54,8 @@ const globalStyles = css`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    overflow-x: hidden; /* Temporary solution, horizontal overflow hidden because of strange margin-right built into the theme which I can't find */
+    /* overflow-x: hidden; */
+    background-color: #001f33;
   }
   a,
   a:visited {
@@ -64,8 +66,9 @@ const globalStyles = css`
 
 const Container = styled.div`
   width: 100vw;
-  height: auto;
   margin: 0;
+  position: relative;
+  min-height: 100vh;
 `;
 
 const HeadContainer = styled.div`
@@ -77,6 +80,7 @@ const HeadContainer = styled.div`
   padding: 0;
   width: 100vw;
   height: 55px;
+  padding: 0 20px;
 `;
 
 const Main = styled.div`

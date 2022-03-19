@@ -28,7 +28,7 @@ const MenuModal = ({ state, ...props }) => {
 };
 
 const MenuOverlay = styled.div`
-  background-color: #514f60;
+  background-color: #051622;
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
