@@ -5,16 +5,12 @@ import MolnGrey from "../assets/moln_grey_small.png";
 
 const MenuLogo = ({ state }) => {
   return (
-    <>
-      <Link
-        link="/"
-        alt="logo link home page"
-        style={{ textDecoration: "none", color: "orange" }}
-      >
+    <LogoContainer>
+      <Link link="/" alt="logo link home page">
         <img src={MolnGrey} />
-        <span>{state.frontity.title}</span>
+        <TitleName>{state.frontity.title}</TitleName>
       </Link>
-    </>
+    </LogoContainer>
   );
 };
 
@@ -29,3 +25,20 @@ const MenuLogo = ({ state }) => {
 // `;
 
 export default connect(MenuLogo);
+
+// const StyledLink = styled(Link)`
+//   color: #fff;
+//   text-decoration: none;
+// `;
+
+const LogoContainer = styled.div`
+  margin-top: 5px;
+`;
+
+const TitleName = styled.span`
+  position: relative;
+  bottom: 4px;
+  margin-left: 5px;
+  font-family: "Pacifico";
+  color: #869ba9;
+`;

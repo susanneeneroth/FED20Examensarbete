@@ -8,6 +8,7 @@ import Home from "./home";
 import Loading from "./loading";
 import Error from "./error";
 import Header from "./header/header";
+// import WebFont from "webfontloader";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -72,20 +73,15 @@ const HeadContainer = styled.div`
   box-sizing: border-box;
   align-items: center;
   flex-direction: column;
-  background-color: #514f60;
-  padding: 5px 0 0 0;
+  background-color: #051622;
+  padding: 0;
   width: 100vw;
-  height: 118px;
+  height: 55px;
 `;
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
 `;
 
 // const Button = styled.button`

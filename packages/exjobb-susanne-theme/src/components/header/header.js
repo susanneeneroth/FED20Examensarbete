@@ -4,6 +4,7 @@ import Link from "../link";
 import Nav from "./nav";
 import MobileMenu from "../../components/menu";
 import MenuLogo from "../../components/menu-logo";
+import ToggleButton from "../../assets/toggle-on-off.png";
 
 const Header = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -22,7 +23,9 @@ const Header = ({ state }) => {
           <Nav />
         </Menu>
 
-        <Right>Right</Right>
+        <Right>
+          <img src={ToggleButton} width="20px" />
+        </Right>
         <MobileMenu />
       </Navigation>
     </Container>
@@ -33,43 +36,24 @@ const Container = styled.div`
   width: 1140px;
   max-width: 100%;
   box-sizing: border-box;
-  padding-top: 14px;
   color: #fff;
-  background: #ccc;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background: #051622;
 `;
 
 const Navigation = styled.div`
   width: 1140px;
   max-width: 100%;
   box-sizing: border-box;
-  padding-top: 14px;
-  color: #fff;
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 `;
 
-const Left = styled.div`
-  flex: 1;
-  text-align: left;
-  background-color: peachpuff;
-`;
-
-const Middle = styled.div`
-  flex: 2;
-  background-color: powderblue;
-  flex-wrap: no-wrap;
-`;
-
 const Right = styled.div`
   /* flex: 1; */
   text-align: right;
-  background-color: green;
 `;
 
 export const StyledLink = styled(Link)`
@@ -77,11 +61,6 @@ export const StyledLink = styled(Link)`
 `;
 
 const Logo = styled.div`
-  height: 40px;
-`;
-
-const LogoImg = styled.img`
-  width: 40px;
   height: 40px;
 `;
 
