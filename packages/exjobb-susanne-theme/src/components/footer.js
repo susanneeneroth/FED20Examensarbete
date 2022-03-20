@@ -4,7 +4,7 @@ import { connect, styled } from "frontity";
 const Footer = () => {
   return (
     <FooterContainer>
-      <InnerContainer>Footer</InnerContainer>
+      <InnerContainer>Send me a line</InnerContainer>
     </FooterContainer>
   );
 };

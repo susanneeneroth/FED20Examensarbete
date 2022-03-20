@@ -32,4 +32,7 @@ const StyledTitle = styled.h1`
 
 const HomeContainer = styled.div`
   background-color: #001f33;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
 `;

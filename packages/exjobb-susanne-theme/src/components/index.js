@@ -9,6 +9,7 @@ import Loading from "./loading";
 import Error from "./error";
 import Header from "./header/header";
 import Footer from "./footer";
+import Hero from "./hero";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -27,6 +28,7 @@ const Root = ({ state }) => {
         <HeadContainer>
           <Header />
         </HeadContainer>
+        <Hero />
         <Main>
           <Switch>
             <Loading when={data.isFetching} />

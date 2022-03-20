@@ -4,10 +4,12 @@
   "description": "Frontity package created using the Frontity CLI.",
   "keywords": [
     "frontity",
-    "frontity-theme"
+    "frontity-custom-theme"
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "@frontity/components": "^1.8.2",
+    "@frontity/html2react": "^1.6.1",
     "frontity": "^1.17.2"
   }
 }

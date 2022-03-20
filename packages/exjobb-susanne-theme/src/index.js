@@ -40,11 +40,7 @@ const exjobbSusanneTheme = {
         import("webfontloader").then((WebFontLoader) => {
           WebFontLoader.load({
             google: {
-              families: [
-                "Pacifico",
-                "Merriweather:400,700:latin-ext",
-                "Sacramento",
-              ],
+              families: ["Pacifico", "Quicksand", "Satisfy"],
             },
           });
         });
