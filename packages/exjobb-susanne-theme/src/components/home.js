@@ -5,13 +5,14 @@ import Post from "./post";
 import Page from "./page";
 import Loading from "./loading";
 import Error from "./error";
+import FeaturedWork from "./featured-work";
 
 const Home = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
     <HomeContainer>
-      <StyledTitle>Featured Work</StyledTitle>
+      <FeaturedWork />
       {/* <Switch>
         <Loading when={data.isFetching} />
         <Post when={data.isPost} />
@@ -25,14 +26,10 @@ const Home = ({ state }) => {
 
 export default connect(Home);
 
-const StyledTitle = styled.h1`
-  color: #1ba098;
-  font-family: "pacifico";
-`;
-
 const HomeContainer = styled.div`
   background-color: #001f33;
-  min-height: 100vh;
+  height: 1200px;
   width: 100vw;
   text-align: center;
+  padding-top: 30px;
 `;

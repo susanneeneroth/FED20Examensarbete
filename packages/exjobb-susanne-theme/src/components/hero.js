@@ -1,8 +1,20 @@
 import React from "react";
 import { connect, styled } from "frontity";
+import MolnGreySmall from "../assets/moln_grey_small.png";
+import MolnGreyBig from "../assets/moln_grey_big.png";
 
 const Hero = () => {
-  return <HeroContainer>UX and Front End Dev</HeroContainer>;
+  return (
+    <HeroContainer>
+      <CloudOne>
+        <img src={MolnGreyBig} alt="cloud image one" />
+      </CloudOne>
+      <CloudTwo>
+        <img src={MolnGreySmall} alt="cloud image two" />
+      </CloudTwo>
+      <TitleH1>UX and Front End Dev</TitleH1>
+    </HeroContainer>
+  );
 };
 
 export default connect(Hero);
@@ -13,6 +25,38 @@ const HeroContainer = styled.div`
   background-color: #001827;
   color: #869ba9;
   font-family: "Quicksand";
-  font-size: 4em;
   text-align: center;
+`;
+
+const TitleH1 = styled.h1`
+  font-size: 3.5em;
+  position: relative;
+  top: 50px;
+  margin: 0;
+
+  @media (max-width: 560px) {
+    font-size: 2em;
+  }
+`;
+
+const CloudOne = styled.div`
+  position: relative;
+  top: 85px;
+  right: 200px;
+
+  @media (max-width: 560px) {
+    right: 100px;
+    top: 75px;
+  }
+`;
+
+const CloudTwo = styled.div`
+  position: relative;
+  top: 150px;
+  left: 150px;
+
+  @media (max-width: 560px) {
+    left: 87px;
+    top: 120px;
+  }
 `;
