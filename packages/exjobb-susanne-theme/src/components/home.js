@@ -28,8 +28,7 @@ export default connect(Home);
 
 const HomeContainer = styled.div`
   background-color: #001f33;
-  height: 1200px;
+  height: 1500px;
   width: 100vw;
-  text-align: center;
   padding-top: 30px;
 `;

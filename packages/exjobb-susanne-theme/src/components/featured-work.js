@@ -9,29 +9,25 @@ const FeaturedWork = () => {
       <FlexContainer>
         <FlexItem>
           <img src={ImagePlaceholder} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque,
-          </p>
+          <h2>Braindump.nu</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </FlexItem>
         <FlexItem>
           <img src={ImagePlaceholder} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque,
-          </p>
+          <h2>Photo sharing app</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </FlexItem>
       </FlexContainer>
       <FlexContainer>
         <FlexItem>
           <img src={ImagePlaceholder} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque,
-          </p>
+          <h2>Pink Web Dev</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </FlexItem>
         <FlexItem>
           <img src={ImagePlaceholder} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque,
-          </p>
+          <h2>Movie API app</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </FlexItem>
       </FlexContainer>
     </FeaturedContainer>
@@ -48,16 +44,24 @@ const FeaturedContainer = styled.div`
 
 const FlexContainer = styled.div`
   display: flex;
-  background: pink;
   margin: 35px auto;
 `;
 
 const FlexItem = styled.div`
   flex: 1;
+  color: #cbe4f5;
+  /* background: peachpuff; */
+
+  h2 {
+    font-family: "pacifico";
+    color: #1ba098;
+    text-align: left;
+  }
 `;
 
 const StyledTitle = styled.h1`
   color: #1ba098;
   font-family: "pacifico";
   margin: auto;
+  text-align: center;
 `;
