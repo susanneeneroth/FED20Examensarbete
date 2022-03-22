@@ -70,7 +70,7 @@ const Container = styled.div`
   width: 100vw;
   margin: 0;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 400px);
 `;
 
 const HeadContainer = styled.div`

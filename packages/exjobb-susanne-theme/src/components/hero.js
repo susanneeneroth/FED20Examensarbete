@@ -41,22 +41,22 @@ const TitleH1 = styled.h1`
 
 const CloudOne = styled.div`
   position: relative;
-  top: 85px;
-  right: 200px;
+  top: 55px;
+  right: 220px;
 
   @media (max-width: 560px) {
-    right: 100px;
-    top: 75px;
+    right: 110px;
+    top: 50px;
   }
 `;
 
 const CloudTwo = styled.div`
-  position: relative;
-  top: 150px;
-  left: 150px;
+  position: absolute;
+  top: 265px;
+  left: 790px;
 
   @media (max-width: 560px) {
-    left: 87px;
-    top: 120px;
+    left: 320px;
+    top: 240px;
   }
 `;

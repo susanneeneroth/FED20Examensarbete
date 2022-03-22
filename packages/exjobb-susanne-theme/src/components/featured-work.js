@@ -38,14 +38,24 @@ export default connect(FeaturedWork);
 
 const FeaturedContainer = styled.div`
   width: 1140px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   min-height: 100vh;
+
+  @media (max-width: 560px) {
+    max-width: 500px;
+  }
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 35px;
+  flex-wrap: wrap;
+
+  @media (max-width: 560px) {
+    max-width: 500px;
+    gap: 0;
+  }
 `;
 
 const FlexItem = styled.div`

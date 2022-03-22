@@ -15,10 +15,11 @@ const FooterContainer = styled.footer`
   color: #1ba098;
   background-color: #001827;
   font-family: "pacifico";
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 400px;
+  position: relative;
+  left: 0;
+  bottom: 0;
 `;
 
 const InnerContainer = styled.div`
