@@ -44,18 +44,25 @@ const FeaturedContainer = styled.div`
 
 const FlexContainer = styled.div`
   display: flex;
-  margin: 35px auto;
+  justify-content: center;
+  gap: 35px;
 `;
 
 const FlexItem = styled.div`
-  flex: 1;
   color: #cbe4f5;
-  /* background: peachpuff; */
+  text-align: center;
+  margin-top: 30px;
 
   h2 {
     font-family: "pacifico";
     color: #1ba098;
     text-align: left;
+    margin-left: 20px;
+  }
+
+  p {
+    text-align: left;
+    margin-left: 20px;
   }
 `;
 
