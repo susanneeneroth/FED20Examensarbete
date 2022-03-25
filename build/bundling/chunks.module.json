@@ -1,7 +1,7 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "7345a928ae0febce9e61",
+  "hash": "58c00c595d7537d7c036",
   "publicPath": "",
   "outputPath": "/Users/susanne/Documents/1_FED20/0_Examensarbete/Git_Repository/FED20Examensarbete/build/static",
   "assetsByChunkName": {
@@ -28,7 +28,7 @@
         "fed20-exjobb"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "images/image_placeholder.png",
