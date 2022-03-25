@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, Global, css, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
-import List from "./list";
+import List from "../components/list/list";
 import Post from "./post";
 import Page from "./page";
 import Home from "./home";

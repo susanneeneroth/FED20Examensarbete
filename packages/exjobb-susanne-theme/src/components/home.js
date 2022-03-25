@@ -6,6 +6,7 @@ import Page from "./page";
 import Loading from "./loading";
 import Error from "./error";
 import FeaturedWork from "./featured-work";
+import ListFrontpage from "./list/list-frontpage";
 
 const Home = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -13,13 +14,14 @@ const Home = ({ state }) => {
   return (
     <HomeContainer>
       <FeaturedWork />
-      {/* <Switch>
+      <Switch>
         <Loading when={data.isFetching} />
+        <ListFrontpage when={data.isArchive} />
         <Post when={data.isPost} />
         <Page when={data.isPage} />
         <Page when={data.isPortfolio} />
         <Error when={data.isError} />
-      </Switch> */}
+      </Switch>
     </HomeContainer>
   );
 };
