@@ -6,17 +6,21 @@ import Page from "./page";
 import Loading from "./loading";
 import Error from "./error";
 import FeaturedWork from "./featured-work";
-import ListFrontpage from "./list/list-frontpage";
+import PortfolioHome from "./list/portfolio-home";
+import FeaturedWorkHome from "./list/featured-work-home";
 
 const Home = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
     <HomeContainer>
+      <FeaturedWorkHome />
       <FeaturedWork />
+      <PortfolioHome />
       <Switch>
         <Loading when={data.isFetching} />
-        <ListFrontpage when={data.isArchive} />
+        <FeaturedWorkHome when={data.isFetching} />
+        <PortfolioHome when={data.isFetching} />
         <Post when={data.isPost} />
         <Page when={data.isPage} />
         <Page when={data.isPortfolio} />
