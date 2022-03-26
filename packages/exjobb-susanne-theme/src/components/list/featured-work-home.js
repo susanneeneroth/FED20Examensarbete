@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { connect, styled, decode } from "frontity";
 import Link from "@frontity/components/link";
 import ImagePlaceholder from "../../assets/image_placeholder.png";
+// import FeaturedMedia from "../featured-media";
 
-const FeaturedWork = ({ state, actions, libraries }) => {
+const FeaturedWork = ({ state, actions, libraries, item }) => {
   const Html2React = libraries.html2react.Component;
 
   useEffect(() => {

@@ -1,12 +1,14 @@
 import React from "react";
 import { connect, Head, styled } from "frontity";
 import dayjs from "dayjs";
+import FeaturedMedia from "./featured-media";
 
 const Post = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const author = state.source.author[post.author];
   const Html2React = libraries.html2react.Component;
+  const fmediaId = post.featured_media;
 
   const formattedDate = dayjs(post.date).format("YYYY-MM-DD");
 
@@ -16,6 +18,7 @@ const Post = ({ state, libraries }) => {
         <title>{post.title.rendered}</title>
         <meta name="description" content={post.excerpt.rendered} />
       </Head>
+      <FeaturedMedia id={post.featured_media} />
       <h2>{post.title.rendered}</h2>
       <PostInfo>
         <p>Posted: {formattedDate}</p>

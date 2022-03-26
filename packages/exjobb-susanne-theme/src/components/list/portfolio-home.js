@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { connect, styled, decode } from "frontity";
-import Pagination from "./pagination";
 import Link from "@frontity/components/link";
-import FeaturedMedia from "../featured-media";
+// import FeaturedMedia from "../featured-media";
+import ImagePlaceholder from "../../assets/image_placeholder_small.png";
 
 const PortfolioHome = ({ state, actions, libraries, item }) => {
   const Html2React = libraries.html2react.Component;
-  const fmedia = state.source.attachment[item.featured_media];
 
   useEffect(() => {
     actions.source.fetch("/category/portfolio");
@@ -25,13 +24,12 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
         <PortfolioContainer>
           <StyledTitle>{category.name}</StyledTitle>
           <FlexPortfolioContainer>
-            {posts.slice(0, 4).map((p) => (
+            {posts.slice(0, 3).map((p) => (
               <FlexPortfolioItem key={p.id}>
+                <img src={ImagePlaceholder} />
                 <Link link={p.link} key={p.id}>
                   <h2>{p.title.rendered}</h2>
-                  {state.theme.featured.showOnList && (
-                    <FeaturedMedia id={item.featured_media} />
-                  )}
+                  {/* <FeaturedMedia src={fmedia.source_url} /> */}
                   <Html2React html={p.excerpt.rendered} />
                 </Link>
               </FlexPortfolioItem>
@@ -48,9 +46,10 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
 export default connect(PortfolioHome);
 
 const PortfolioContainer = styled.div`
-  width: 1140px;
+  width: 1100px;
   margin: 0 auto 40px;
   /* min-height: 100vh; */
+  justify-content: center;
 
   @media (max-width: 560px) {
     max-width: 500px;
@@ -60,7 +59,7 @@ const PortfolioContainer = styled.div`
 const FlexPortfolioContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 40px;
   flex-wrap: wrap;
 
   @media (max-width: 560px) {
@@ -73,6 +72,7 @@ const FlexPortfolioItem = styled.div`
   color: #cbe4f5;
   text-align: center;
   margin-top: 10px;
+  max-width: 300px;
 
   h2 {
     font-family: "pacifico";
