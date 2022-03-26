@@ -5,7 +5,6 @@ import Post from "./post";
 import Page from "./page";
 import Loading from "./loading";
 import Error from "./error";
-import FeaturedWork from "./featured-work";
 import PortfolioHome from "./list/portfolio-home";
 import FeaturedWorkHome from "./list/featured-work-home";
 
@@ -15,7 +14,6 @@ const Home = ({ state }) => {
   return (
     <HomeContainer>
       <FeaturedWorkHome />
-      <FeaturedWork />
       <PortfolioHome />
       <Switch>
         <Loading when={data.isFetching} />

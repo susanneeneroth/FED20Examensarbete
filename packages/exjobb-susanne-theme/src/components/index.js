@@ -33,7 +33,7 @@ const Root = ({ state }) => {
           <Switch>
             <Loading when={data.isFetching} />
             <Home when={data.isHome} />
-            {/* <List when={data.isArchive} /> */}
+            <List when={data.isArchive} />
             <Post when={data.isPost} />
             <Page when={data.isPage} />
             <Page when={data.isPortfolio} />

@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { connect, styled, decode } from "frontity";
-import Pagination from "./pagination";
 import Link from "@frontity/components/link";
+import ImagePlaceholder from "../../assets/image_placeholder.png";
 
-const FeaturedWork = ({ state, actions }) => {
+const FeaturedWork = ({ state, actions, libraries }) => {
+  const Html2React = libraries.html2react.Component;
+
   useEffect(() => {
     actions.source.fetch("/category/featured");
   }, []);
 
-  // Get the data of the current list.
-  // const data = state.source.get(state.router.link);
+  // Gets the data from featured category i Wordpress
   const data = state.source.get("/category/featured");
 
   if (data.isCategory) {
@@ -18,14 +19,22 @@ const FeaturedWork = ({ state, actions }) => {
     const posts = data.items.map(({ type, id }) => state.source[type][id]);
 
     return (
-      <Item>
-        <TitleH1>{category.name}</TitleH1>
-        {posts.slice(0, 4).map((p) => (
-          <Link link={p.link} key={p.id}>
-            {p.title.rendered}
-          </Link>
-        ))}
-      </Item>
+      <>
+        <FeaturedContainer>
+          <StyledTitle>{category.name}</StyledTitle>
+          <FlexContainer>
+            {posts.slice(0, 4).map((p) => (
+              <FlexItem key={p.id}>
+                <img src={ImagePlaceholder} />
+                <Link link={p.link} key={p.id}>
+                  <h2>{p.title.rendered}</h2>
+                  <Html2React html={p.excerpt.rendered} />
+                </Link>
+              </FlexItem>
+            ))}
+          </FlexContainer>
+        </FeaturedContainer>
+      </>
     );
   }
 
@@ -34,49 +43,49 @@ const FeaturedWork = ({ state, actions }) => {
 
 export default connect(FeaturedWork);
 
-const TitleH1 = styled.h1`
-  color: #1ba098;
-`;
+const FeaturedContainer = styled.div`
+  width: 1140px;
+  margin: 0 auto 40px;
+  min-height: 100vh;
 
-const Item = styled.div`
-  padding: 0;
-  margin: 0 16px;
-  color: #1ba098;
-  font-size: 0.9em;
-  box-sizing: border-box;
-  display: inline;
-  font-family: "Pacifico";
-
-  & > a {
-    display: inline-block;
-    line-height: 2em;
-    border-bottom: 2px solid;
-    border-bottom-color: transparent;
-    &[aria-current="page"] {
-      border-bottom-color: #fff;
-    }
+  @media (max-width: 560px) {
+    max-width: 500px;
   }
 `;
 
-// const StyledLink = styled(Link)`
-//   color: #fff;
-// `;
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
 
-// const Container = styled.section`
-//   width: 1140px;
-//   height: auto;
-//   margin: 0;
-//   list-style: none;
-//   display: flex;
-//   justify-content: flex-start;
-//   flex-wrap: wrap;
-//   padding: 20px 0;
+  @media (max-width: 560px) {
+    max-width: 500px;
+    gap: 0;
+  }
+`;
 
-//   /* background-color: pink; */
-// `;
+const FlexItem = styled.div`
+  color: #cbe4f5;
+  text-align: center;
+  margin-top: 30px;
 
-// const Header = styled.h3`
-//   font-weight: 300;
-//   text-transform: capitalize;
-//   color: rgba(12, 17, 43, 0.9);
-// `;
+  h2 {
+    font-family: "pacifico";
+    color: #1ba098;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  p {
+    text-align: left;
+    margin-left: 20px;
+  }
+`;
+
+const StyledTitle = styled.h1`
+  color: #1ba098;
+  font-family: "pacifico";
+  margin: auto;
+  text-align: center;
+`;
