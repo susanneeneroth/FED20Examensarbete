@@ -51,6 +51,7 @@ export default connect(Root);
 const globalStyles = css`
   html {
     box-sizing: border-box;
+    margin: 0;
   }
   body {
     margin: 0;
@@ -67,7 +68,7 @@ const globalStyles = css`
 `;
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   margin: 0;
   position: relative;
   min-height: calc(100vh - 400px);
@@ -80,7 +81,7 @@ const HeadContainer = styled.div`
   flex-direction: column;
   background-color: #051622;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   height: 55px;
   padding: 0 20px;
 `;

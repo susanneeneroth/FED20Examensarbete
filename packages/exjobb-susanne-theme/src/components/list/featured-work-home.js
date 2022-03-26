@@ -47,7 +47,7 @@ export default connect(FeaturedWork);
 const FeaturedContainer = styled.div`
   width: 1140px;
   margin: 0 auto 40px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   @media (max-width: 560px) {
     max-width: 500px;
