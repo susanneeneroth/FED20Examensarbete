@@ -35,6 +35,7 @@ const exjobbSusanneTheme = {
       },
       beforeSSR: async ({ state, actions }) => {
         await actions.source.fetch(`/menu/${state.theme.menuUrl}/`);
+        await actions.source.fetch("/contact-footer");
       },
       beforeCSR: () => {
         import("webfontloader").then((WebFontLoader) => {

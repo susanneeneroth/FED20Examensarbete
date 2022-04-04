@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
+
 // import FooterForm from "./footer-form";
 
 const Footer = ({ state, libraries }) => {
+  // const data = state.source.get("/contact-footer");
+
+  const Html2React = libraries.html2react.Component;
+
   const data = state.source.get("/contact-footer");
   const contactForm = state.source.page[data.id];
-  const Html2React = libraries.html2react.Component;
 
   return (
     <>
@@ -13,6 +17,7 @@ const Footer = ({ state, libraries }) => {
         <Html2React html={contactForm.content.rendered} />
       </ContactForm>
     </>
+
     // <FooterContainer>
     //   <InnerContainer>
     //     <FooterForm />
