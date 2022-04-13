@@ -72,35 +72,40 @@ const ContactForm = styled.div`
   .wpcf7 input[type="text"] {
     width: 100% !important;
     background-color: #869ba9;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     /* flex: 1; */
   }
 
   .wpcf7 input[type="email"] {
     width: 100% !important;
     background-color: #869ba9;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     /* flex: 1; */
   }
 
-  .wpcf7 textarea,
-  input,
-  label {
+  .wpcf7 label {
     color: #1ba098;
-    margin-top: 15px;
-    margin-bottom: 10px;
   }
 
   .wpcf7 textarea {
     background-color: #869ba9;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 3px;
     width: 100% !important;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .wpcf7 input[type="submit"] {
@@ -111,4 +116,8 @@ const ContactForm = styled.div`
     color: #fff;
     margin-top: 0;
   }
+
+  /* .wpcf7 input::placeholder {
+    color: pink;
+  } */
 `;
