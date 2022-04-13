@@ -12,8 +12,8 @@ const Footer = ({ state, libraries }) => {
     <>
       <FooterContainer>
         <InnerContainer>
-          <h2>Send me a line</h2>
           <ContactForm>
+            <h2>Send me a line</h2>
             <Html2React html={contactForm.content.rendered} />
           </ContactForm>
         </InnerContainer>
@@ -47,6 +47,9 @@ const InnerContainer = styled.div`
   margin: auto;
   padding: 30px;
   text-align: center;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
 `;
 
 const ContactForm = styled.div`
@@ -55,54 +58,57 @@ const ContactForm = styled.div`
   margin: auto;
   padding: 30px;
   text-align: center;
-  background-color: pink;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .wpcf7 {
+    width: 100% !important;
+    margin: auto;
+    text-align: center;
+  }
 
   .wpcf7 input[type="text"] {
-    background-color: purple;
-    flex: 1;
+    width: 100% !important;
+    background-color: #869ba9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    /* flex: 1; */
   }
 
   .wpcf7 input[type="email"] {
-    background-color: purple;
-    flex: 1;
+    width: 100% !important;
+    background-color: #869ba9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    /* flex: 1; */
   }
 
-  .wpcf7 input,
+  .wpcf7 textarea,
+  input,
   label {
-    color: #fff;
+    color: #1ba098;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
-  .wpcf7 input,
-  textarea {
-    background-color: green;
+  .wpcf7 textarea {
+    background-color: #869ba9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    width: 100% !important;
   }
 
   .wpcf7 input[type="submit"] {
-    background-color: purple;
+    background-color: #d65079;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    margin-top: 0;
   }
 `;
-
-// const FormInput = styled.input.attrs({
-//   type: 'submit',
-//   value: 'Submit'
-// })`
-//   background: #00aec9;
-//   color: #fff;
-//   cursor: pointer;
-//   margin-bottom: 0;
-//   text-transform: uppercase;
-//   width: 100%;
-//   border-radius: 5px;
-//   height: 35px;
-//   border-color: transparent;
-//   box-shadow: 0px;
-//   outline: none;
-//   transition: 0.15s;
-//   text-align: center;
-//   &:active {
-//     background-color: #f1ac15;
-//   }
-// `

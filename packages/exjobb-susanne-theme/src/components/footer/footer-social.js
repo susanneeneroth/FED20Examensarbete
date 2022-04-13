@@ -11,8 +11,9 @@ const SocialContainer = styled.footer`
   width: 100%;
   height: 40px;
   padding-top: 20px;
-  color: #ccc;
-  background-color: #051622;
+  color: #869ba9;
+  background-color: #05111a;
+  font-size: 0.8rem;
   font-family: "quicksand";
   text-align: center;
   position: relative;

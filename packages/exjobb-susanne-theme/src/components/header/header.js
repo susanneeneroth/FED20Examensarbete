@@ -37,7 +37,7 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   color: #fff;
-  background: #051622;
+  background: #06121a;
 `;
 
 const Navigation = styled.div`
