@@ -1,25 +1,26 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
-// import post from "./post";
+import ImagePlaceholder from "../../assets/image_placeholder_small.png";
 
 const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const Excerpt = libraries.html2react.Component;
 
   return (
-    <Items>
+    <ItemsContainer>
       {data.items.map((item) => {
         const post = state.source[item.type][item.id];
         return (
-          <div key={item.id}>
+          <Item key={item.id}>
+            <img src={ImagePlaceholder} />
             <Link key={item.id} link={post.link}>
-              {post.title.rendered}
+              <h2>{post.title.rendered}</h2>
               <StyledExcerpt>
                 <Excerpt html={post.excerpt.rendered} />
               </StyledExcerpt>
             </Link>
-          </div>
+          </Item>
         );
       })}
       <PrevNextNav>
@@ -42,13 +43,28 @@ const List = ({ state, actions, libraries }) => {
           </button>
         )}
       </PrevNextNav>
-    </Items>
+    </ItemsContainer>
   );
 };
 
 export default connect(List);
 
-const Items = styled.div`
+const ItemsContainer = styled.div`
+  width: 1020px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  /* background-color: pink; */
+
+  @media (max-width: 560px) {
+    max-width: 500px;
+    gap: 0;
+    justify-content: center;
+  }
+
   & > a {
     display: block;
     margin: 6px 0;
@@ -60,10 +76,25 @@ const Items = styled.div`
   & > a:visited {
     color: black;
   }
+
+  h2 {
+    color: #1ba098;
+    font-family: "pacifico";
+    margin-left: 10px;
+  }
+`;
+
+const Item = styled.div`
+  box-sizing: border-box;
 `;
 
 const StyledExcerpt = styled.div`
-  color: pink;
+  color: #cbe4f5;
+  max-width: 312px;
+
+  p {
+    margin-left: 10px;
+  }
 `;
 
 const PrevNextNav = styled.div`

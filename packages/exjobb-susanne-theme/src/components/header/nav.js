@@ -31,7 +31,7 @@ const NavContainer = styled.nav`
   padding: 0;
   display: flex;
   justify-content: right;
-  background-color: #06121a;
+  background-color: #051622;
 
   @media screen and (max-width: 560px) {
     display: none;

@@ -48,7 +48,6 @@ export default connect(PortfolioHome);
 const PortfolioContainer = styled.div`
   width: 1100px;
   margin: 0 auto 40px;
-  /* min-height: 100vh; */
   justify-content: center;
   box-sizing: border-box;
 

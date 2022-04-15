@@ -37,7 +37,7 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   color: #fff;
-  background: #06121a;
+  background: #051622;
 `;
 
 const Navigation = styled.div`
@@ -49,6 +49,7 @@ const Navigation = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background: #051622;
 `;
 
 const Right = styled.div`

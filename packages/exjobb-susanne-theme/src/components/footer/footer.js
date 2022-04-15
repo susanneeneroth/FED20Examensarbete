@@ -11,12 +11,12 @@ const Footer = ({ state, libraries }) => {
   return (
     <>
       <FooterContainer>
-        <InnerContainer>
-          <ContactForm>
-            <h2>Send me a line</h2>
-            <Html2React html={contactForm.content.rendered} />
-          </ContactForm>
-        </InnerContainer>
+        {/* <InnerContainer> */}
+        <ContactForm>
+          <h2>Send me a line</h2>
+          <Html2React html={contactForm.content.rendered} />
+        </ContactForm>
+        {/* </InnerContainer> */}
       </FooterContainer>
     </>
 
@@ -42,22 +42,20 @@ const FooterContainer = styled.footer`
 `;
 
 const InnerContainer = styled.div`
-  width: 70vw;
+  width: 840px;
   height: auto;
   margin: auto;
   padding: 30px;
   text-align: center;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
+  background-color: pink;
 `;
 
 const ContactForm = styled.div`
-  width: 70%;
+  width: 100%;
   height: auto;
   margin: auto;
-  padding: 30px;
   text-align: center;
+  padding-top: 30px;
 
   h2 {
     margin-bottom: 0;
@@ -141,7 +139,7 @@ const ContactForm = styled.div`
     .wpcf7-form input[type="submit"] {
       position: relative;
       top: -30px;
-      left: 105px;
+      left: 90px;
     }
   }
 `;

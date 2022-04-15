@@ -23,6 +23,7 @@ const HeroContainer = styled.div`
   height: 400px;
   width: 100%;
   background-color: #001827;
+  /* background: linear-gradient(#001827, #051622); */
   color: #869ba9;
   font-family: "Quicksand";
   text-align: center;

@@ -13,23 +13,38 @@ const Post = ({ state, libraries }) => {
   const formattedDate = dayjs(post.date).format("YYYY-MM-DD");
 
   return (
-    <div>
+    <PostContainer>
       <Head>
         <title>{post.title.rendered}</title>
         <meta name="description" content={post.excerpt.rendered} />
       </Head>
-      <FeaturedMedia id={post.featured_media} />
-      <h2>{post.title.rendered}</h2>
-      <PostInfo>
-        <p>Posted: {formattedDate}</p>
-        <p>Author: {author.name}</p>
-      </PostInfo>
-      <Html2React html={post.content.rendered} />
-    </div>
+      <PostContent>
+        <FeaturedMedia id={post.featured_media} />
+        <h2>{post.title.rendered}</h2>
+        <PostInfo>
+          <p>Posted: {formattedDate}</p>
+          <p>Author: {author.name}</p>
+        </PostInfo>
+        <Html2React html={post.content.rendered} />
+      </PostContent>
+    </PostContainer>
   );
 };
 
-export default connect(Post);
+const PostContainer = styled.div`
+  height: auto;
+  width: 1140px;
+  padding-top: 30px;
+  color: #cbe4f5;
+  padding: 10px 0 20px 0;
+  /* background-color: pink; */
+`;
+
+const PostContent = styled.div`
+  height: auto;
+  width: 840px;
+  margin: auto;
+`;
 
 const PostInfo = styled.div`
   background-image: linear-gradient(to right, #f4f4f4, #fff);
@@ -37,8 +52,11 @@ const PostInfo = styled.div`
   padding: 0.5em;
   border-left: 4px solid lightseagreen;
   font-size: 0.8em;
+  color: #001827;
 
   & > p {
     margin: 0;
   }
 `;
+
+export default connect(Post);
