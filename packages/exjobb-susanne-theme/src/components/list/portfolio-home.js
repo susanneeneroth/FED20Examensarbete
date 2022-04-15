@@ -50,6 +50,7 @@ const PortfolioContainer = styled.div`
   margin: 0 auto 40px;
   /* min-height: 100vh; */
   justify-content: center;
+  box-sizing: border-box;
 
   @media (max-width: 560px) {
     max-width: 500px;

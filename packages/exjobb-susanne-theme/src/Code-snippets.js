@@ -48,3 +48,31 @@
 //     </Menu>
 //   </HeaderContent>
 // </Container>
+
+// Form styling
+// label {
+//   color: rgb(45, 65, 82);
+//   width: 100%;
+// }
+
+// textarea {
+//   width: 100%;
+//   resize: none;
+// }
+
+// span.wpcf7-form-control-wrap {
+//   margin-bottom: 20px;
+//   width: 100%;
+//   display: inline-block;
+// }
+// .wpcf7-form-control {
+//   width: 100%;
+//   padding: 12px;
+//   background-color: #eef2fd;
+//   border: 1px solid #eef2fd;
+// }
+
+// input.wpcf7-form-control.wpcf7-submit {
+//   width: auto;
+//   padding: 8px 32px;
+// }
