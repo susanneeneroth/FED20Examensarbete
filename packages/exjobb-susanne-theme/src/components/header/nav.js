@@ -1,8 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-// import Link from "./link";
 import Link from "@frontity/components/link";
-import { css } from "frontity";
 
 const Nav = ({ state }) => {
   const items = state.source.get(`/menu/${state.theme.menuUrl}/`).items;

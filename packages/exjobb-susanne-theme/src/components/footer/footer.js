@@ -1,8 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
 
-// import FooterForm from "./footer-form";
-
 const Footer = ({ state, libraries }) => {
   const Html2React = libraries.html2react.Component;
   const data = state.source.get("/contact-footer");
@@ -11,20 +9,12 @@ const Footer = ({ state, libraries }) => {
   return (
     <>
       <FooterContainer>
-        {/* <InnerContainer> */}
         <ContactForm>
           <h2>Send me a line</h2>
           <Html2React html={contactForm.content.rendered} />
         </ContactForm>
-        {/* </InnerContainer> */}
       </FooterContainer>
     </>
-
-    // <FooterContainer>
-    //   <InnerContainer>
-    //     <FooterForm />
-    //   </InnerContainer>
-    // </FooterContainer>
   );
 };
 
@@ -39,6 +29,8 @@ const FooterContainer = styled.footer`
   position: relative;
   left: 0;
   bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
 `;
 
 const InnerContainer = styled.div`
@@ -66,7 +58,6 @@ const ContactForm = styled.div`
     width: 840px !important;
     margin: auto;
     text-align: center;
-    /* background-color: pink; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -143,8 +134,3 @@ const ContactForm = styled.div`
     }
   }
 `;
-
-// const FormContainer = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-// `;
