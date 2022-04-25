@@ -33,6 +33,7 @@ const Content = styled.section`
   margin: auto;
   padding: 10px 0 20px 0;
   color: #869ba9;
+  background-color: #ccc;
 
   h2 {
     margin-top: 0;

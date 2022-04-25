@@ -6,6 +6,8 @@ import ImagePlaceholder from "../../assets/image_placeholder.png";
 
 const FeaturedWork = ({ state, actions, libraries, item }) => {
   const Html2React = libraries.html2react.Component;
+  // const author = state.source.author[item.author];
+  // const date = new Date(item.date);
 
   useEffect(() => {
     actions.source.fetch("/category/featured");
@@ -26,7 +28,7 @@ const FeaturedWork = ({ state, actions, libraries, item }) => {
           <FlexContainer>
             {posts.slice(0, 4).map((p) => (
               <FlexItem key={p.id}>
-                <img src={ImagePlaceholder} />
+                <Image src={ImagePlaceholder} />
                 <Link link={p.link} key={p.id}>
                   <h2>{p.title.rendered}</h2>
                   <Html2React html={p.excerpt.rendered} />
@@ -89,4 +91,8 @@ const StyledTitle = styled.h1`
   font-family: "pacifico";
   margin: auto;
   text-align: center;
+`;
+
+const Image = styled.img`
+  border-radius: 3px;
 `;

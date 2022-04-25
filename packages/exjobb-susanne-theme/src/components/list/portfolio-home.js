@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import { connect, styled, decode } from "frontity";
 import Link from "@frontity/components/link";
-// import FeaturedMedia from "../featured-media";
+import FeaturedMedia from "../featured-media";
 import ImagePlaceholder from "../../assets/image_placeholder_small.png";
+import featuredMedia from "../featured-media";
+import { portfolioImages } from "../../data/portfolioImages";
 
 const PortfolioHome = ({ state, actions, libraries, item }) => {
   const Html2React = libraries.html2react.Component;
+  // const author = state.source.author[item.author];
+  // const date = new Date(item.date);
+  // const fmedia = state.source.attachment[item.FeaturedMedia];
 
   useEffect(() => {
     actions.source.fetch("/category/portfolio");
@@ -18,6 +23,7 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
     const category = state.source.category[data.id];
 
     const posts = data.items.map(({ type, id }) => state.source[type][id]);
+    console.log("portfolioimaages", portfolioImages);
 
     return (
       <>
@@ -26,10 +32,18 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
           <FlexPortfolioContainer>
             {posts.slice(0, 3).map((p) => (
               <FlexPortfolioItem key={p.id}>
-                <img src={ImagePlaceholder} />
+                {portfolioImages.map((item) => (
+                  <Image src={item.img} key={item.id} />
+                ))}
+
+                {/* <Image src={ImagePlaceholder} /> */}
+
+                {/* <FeaturedMedia id={item.featured_media} /> */}
+                {/* <img src={fmedia.source_url} /> */}
+
                 <Link link={p.link} key={p.id}>
                   <h2>{p.title.rendered}</h2>
-                  {/* <FeaturedMedia src={fmedia.source_url} /> */}
+
                   <Html2React html={p.excerpt.rendered} />
                 </Link>
               </FlexPortfolioItem>
@@ -116,6 +130,10 @@ const Item = styled.div`
       border-bottom-color: #fff;
     }
   }
+`;
+
+const Image = styled.img`
+  border-radius: 3px;
 `;
 
 // const StyledLink = styled(Link)`

@@ -24,8 +24,8 @@ const marsTheme = {
       menuUrl: "primary-menu",
       isMobileMenuOpen: false,
       featured: {
-        showOnList: false,
-        showOnPost: false,
+        showOnList: true,
+        showOnPost: true,
       },
     },
   },

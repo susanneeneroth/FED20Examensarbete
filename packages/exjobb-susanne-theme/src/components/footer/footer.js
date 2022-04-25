@@ -106,7 +106,7 @@ const ContactForm = styled.div`
     color: #fff;
     margin-top: 0;
     position: relative;
-    top: 192px;
+    top: 168px;
   }
 
   @media screen and (max-width: 560px) {

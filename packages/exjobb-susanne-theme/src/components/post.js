@@ -2,13 +2,19 @@ import React from "react";
 import { connect, Head, styled } from "frontity";
 import dayjs from "dayjs";
 import FeaturedMedia from "./featured-media";
+import List from "./list";
 
-const Post = ({ state, libraries }) => {
+const Post = ({ state, libraries, actions }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const author = state.source.author[post.author];
   const Html2React = libraries.html2react.Component;
   const fmediaId = post.featured_media;
+  console.log("fmediaId", fmediaId);
+
+  // Prefetch home posts and the list component.
+  actions.source.fetch("/");
+  List.preload();
 
   const formattedDate = dayjs(post.date).format("YYYY-MM-DD");
 

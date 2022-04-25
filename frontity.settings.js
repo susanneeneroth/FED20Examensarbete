@@ -27,8 +27,8 @@ const settings = {
           url: "http://localhost:10023",
           postTypes: [
             {
-              type: "portfolio",
-              endpoint: "portfolio",
+              type: "more-work",
+              endpoint: "more-work",
               // archive: "/portfolio-archive",
             },
           ],

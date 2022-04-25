@@ -13,7 +13,7 @@ const List = ({ state, actions, libraries }) => {
         const post = state.source[item.type][item.id];
         return (
           <Item key={item.id}>
-            <img src={ImagePlaceholder} />
+            <Image src={ImagePlaceholder} />
             <Link key={item.id} link={post.link}>
               <h2>{post.title.rendered}</h2>
               <StyledExcerpt>
@@ -82,6 +82,10 @@ const ItemsContainer = styled.div`
     font-family: "pacifico";
     margin-left: 10px;
   }
+`;
+
+const Image = styled.img`
+  border-radius: 3px;
 `;
 
 const Item = styled.div`
