@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import ImagePlaceholder from "../../assets/image_placeholder_small.png";
 import FeaturedMedia from "../featured-media";
+import { portfolioImages } from "../../data/portfolioImages";
 
 const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -15,7 +16,9 @@ const List = ({ state, actions, libraries }) => {
         return (
           <Item key={item.id}>
             <FeaturedMedia id={item.featured_media} />
-            <Image src={ImagePlaceholder} />
+            {portfolioImages.map((item, i) => (
+              <Image src={item.img} key={i} />
+            ))}
             <Link key={item.id} link={post.link}>
               <h2>{post.title.rendered}</h2>
               <StyledExcerpt>
@@ -92,6 +95,17 @@ const Image = styled.img`
 
 const Item = styled.div`
   box-sizing: border-box;
+  text-align: center;
+
+  h2 {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+    margin-left: 20px;
+  }
 `;
 
 const StyledExcerpt = styled.div`

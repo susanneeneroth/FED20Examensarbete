@@ -15,12 +15,14 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
     actions.source.fetch("/category/portfolio");
   }, []);
 
-  useEffect(() => {
-    actions.source.fetch("/portfolio-archive/");
-  }, []);
+  // useEffect(() => {
+  //   actions.source.fetch("/portfolio-archive/");
+  // }, []);
 
   // Gets the data from portfolio category i Wordpress
   const data = state.source.get("/category/portfolio");
+  // const post = state.source[data.type][data.id];
+  // const fmediaId = post.featured_media;
 
   if (data.isCategory) {
     const category = state.source.category[data.id];
@@ -31,6 +33,7 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
     return (
       <>
         <PortfolioContainer>
+          <hr />
           <StyledTitle>{category.name}</StyledTitle>
           <FlexPortfolioContainer>
             {posts.slice(0, 3).map((p) => (
@@ -65,6 +68,12 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   box-sizing: border-box;
 
+  hr {
+    margin-bottom: 50px;
+    color: #869ba9;
+    width: 350px;
+  }
+
   @media (max-width: 560px) {
     max-width: 500px;
   }
@@ -75,6 +84,7 @@ const FlexPortfolioContainer = styled.div`
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin-top: 20px;
 
   @media (max-width: 560px) {
     max-width: 500px;
@@ -108,53 +118,6 @@ const StyledTitle = styled.h1`
   text-align: center;
 `;
 
-const TitleH1 = styled.h1`
-  color: #1ba098;
-`;
-
-const Item = styled.div`
-  padding: 0;
-  margin: 0 16px;
-  color: #1ba098;
-  font-size: 0.9em;
-  box-sizing: border-box;
-  display: inline;
-  font-family: "Pacifico";
-
-  & > a {
-    display: inline-block;
-    line-height: 2em;
-    border-bottom: 2px solid;
-    border-bottom-color: transparent;
-    &[aria-current="page"] {
-      border-bottom-color: #fff;
-    }
-  }
-`;
-
 const Image = styled.img`
   border-radius: 3px;
 `;
-
-// const StyledLink = styled(Link)`
-//   color: #fff;
-// `;
-
-// const Container = styled.section`
-//   width: 1140px;
-//   height: auto;
-//   margin: 0;
-//   list-style: none;
-//   display: flex;
-//   justify-content: flex-start;
-//   flex-wrap: wrap;
-//   padding: 20px 0;
-
-//   /* background-color: pink; */
-// `;
-
-// const Header = styled.h3`
-//   font-weight: 300;
-//   text-transform: capitalize;
-//   color: rgba(12, 17, 43, 0.9);
-// `;

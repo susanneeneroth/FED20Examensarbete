@@ -31,9 +31,8 @@ const Content = styled.section`
   height: auto;
   width: 840px;
   margin: auto;
-  padding: 10px 0 20px 0;
+  padding: 10px 10px 30px 30px;
   color: #869ba9;
-  background-color: #ccc;
 
   h2 {
     margin-top: 0;

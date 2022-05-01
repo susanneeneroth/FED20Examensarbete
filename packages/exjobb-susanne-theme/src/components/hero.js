@@ -27,6 +27,7 @@ const HeroContainer = styled.div`
   color: #869ba9;
   font-family: "Quicksand";
   text-align: center;
+  padding-top: 50px;
 `;
 
 const TitleH1 = styled.h1`
@@ -53,11 +54,11 @@ const CloudOne = styled.div`
 
 const CloudTwo = styled.div`
   position: absolute;
-  top: 265px;
-  left: 790px;
+  top: 320px;
+  left: 830px;
 
   @media (max-width: 560px) {
     left: 320px;
-    top: 240px;
+    top: 290px;
   }
 `;

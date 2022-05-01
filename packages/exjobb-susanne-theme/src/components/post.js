@@ -10,7 +10,6 @@ const Post = ({ state, libraries, actions }) => {
   const author = state.source.author[post.author];
   const Html2React = libraries.html2react.Component;
   const fmediaId = post.featured_media;
-  console.log("fmediaId", fmediaId);
 
   // Prefetch home posts and the list component.
   actions.source.fetch("/");
@@ -25,7 +24,7 @@ const Post = ({ state, libraries, actions }) => {
         <meta name="description" content={post.excerpt.rendered} />
       </Head>
       <PostContent>
-        <FeaturedMedia id={post.featured_media} />
+        <FeaturedMedia id={fmediaId} />
         <h2>{post.title.rendered}</h2>
         <PostInfo>
           <p>Posted: {formattedDate}</p>
@@ -43,7 +42,6 @@ const PostContainer = styled.div`
   padding-top: 30px;
   color: #cbe4f5;
   padding: 10px 0 20px 0;
-  /* background-color: pink; */
 `;
 
 const PostContent = styled.div`
@@ -53,7 +51,7 @@ const PostContent = styled.div`
 `;
 
 const PostInfo = styled.div`
-  background-image: linear-gradient(to right, #f4f4f4, #fff);
+  background-image: linear-gradient(to right, pink, #fff);
   margin-bottom: 1em;
   padding: 0.5em;
   border-left: 4px solid lightseagreen;
