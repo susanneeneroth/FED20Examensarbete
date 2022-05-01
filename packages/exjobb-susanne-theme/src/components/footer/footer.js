@@ -33,15 +33,6 @@ const FooterContainer = styled.footer`
   padding-bottom: 50px;
 `;
 
-const InnerContainer = styled.div`
-  width: 840px;
-  height: auto;
-  margin: auto;
-  padding: 30px;
-  text-align: center;
-  background-color: pink;
-`;
-
 const ContactForm = styled.div`
   width: 100%;
   height: auto;
@@ -106,7 +97,7 @@ const ContactForm = styled.div`
     color: #fff;
     margin-top: 0;
     position: relative;
-    top: 168px;
+    top: 190px;
   }
 
   @media screen and (max-width: 560px) {

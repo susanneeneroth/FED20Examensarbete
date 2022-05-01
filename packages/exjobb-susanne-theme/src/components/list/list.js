@@ -2,6 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import ImagePlaceholder from "../../assets/image_placeholder_small.png";
+import FeaturedMedia from "../featured-media";
 
 const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -13,6 +14,7 @@ const List = ({ state, actions, libraries }) => {
         const post = state.source[item.type][item.id];
         return (
           <Item key={item.id}>
+            <FeaturedMedia id={item.featured_media} />
             <Image src={ImagePlaceholder} />
             <Link key={item.id} link={post.link}>
               <h2>{post.title.rendered}</h2>

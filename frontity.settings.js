@@ -14,8 +14,8 @@ const settings = {
         theme: {
           menu: [],
           featured: {
-            showOnList: false,
-            showOnPost: false,
+            showOnList: true,
+            showOnPost: true,
           },
         },
       },
@@ -29,7 +29,7 @@ const settings = {
             {
               type: "more-work",
               endpoint: "more-work",
-              // archive: "/portfolio-archive",
+              archive: "/portfolio-archive",
             },
           ],
           postsPage: "Blog",
