@@ -39,7 +39,7 @@ const FeaturedContainer = styled.div`
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 120px;
+  gap: 60px;
   flex-wrap: wrap;
 
   @media (max-width: 560px) {

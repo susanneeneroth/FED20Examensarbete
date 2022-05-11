@@ -15,7 +15,6 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
     const category = state.source.category[data.id];
 
     const posts = data.items.map(({ type, id }) => state.source[type][id]);
-    console.log("portfolioimages", portfolioImages);
 
     return (
       <>

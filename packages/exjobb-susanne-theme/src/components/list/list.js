@@ -4,29 +4,16 @@ import Link from "@frontity/components/link";
 import ImagePlaceholder from "../../assets/image_placeholder_small.png";
 import FeaturedMedia from "../featured-media";
 import { portfolioImages } from "../../data/portfolioImages";
+import ListItemPortfolio from "./list-item-portfolio";
 
-const List = ({ state, actions, libraries }) => {
+const List = ({ state, actions, libraries, item }) => {
   const data = state.source.get(state.router.link);
-  const Excerpt = libraries.html2react.Component;
 
   return (
     <ItemsContainer>
-      {data.items.map((item) => {
-        const post = state.source[item.type][item.id];
-        return (
-          <Item key={item.id}>
-            <FeaturedMedia id={item.featured_media} />
-            {portfolioImages.map((item, i) => (
-              <Image src={item.img} key={i} />
-            ))}
-            <Link key={item.id} link={post.link}>
-              <h2>{post.title.rendered}</h2>
-              <StyledExcerpt>
-                <Excerpt html={post.excerpt.rendered} />
-              </StyledExcerpt>
-            </Link>
-          </Item>
-        );
+      {data.items.map(({ type, id }) => {
+        const post = state.source[type][id];
+        return <ListItemPortfolio key={post.id} item={post} />;
       })}
       <PrevNextNav>
         {data.previous && (
