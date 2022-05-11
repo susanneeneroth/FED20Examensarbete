@@ -45,22 +45,16 @@ const FlexPortfolioItem = styled.div`
     font-family: "pacifico";
     color: #1ba098;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   p {
     text-align: left;
-    margin-left: 20px;
+    margin-left: 12px;
   }
-`;
 
-const StyledTitle = styled.h1`
-  color: #1ba098;
-  font-family: "pacifico";
-  margin: auto;
-  text-align: center;
-`;
-
-const Image = styled.img`
-  border-radius: 3px;
+  img {
+    border-radius: 5px;
+    max-width: 295px;
+  }
 `;

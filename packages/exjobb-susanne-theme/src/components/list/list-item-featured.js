@@ -51,6 +51,10 @@ const FlexItem = styled.div`
     text-align: left;
     margin-left: 20px;
   }
+
+  img {
+    border-radius: 5px;
+  }
 `;
 
 const StyledTitle = styled.h1`

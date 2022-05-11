@@ -54,7 +54,3 @@ const StyledTitle = styled.h1`
   margin: auto;
   text-align: center;
 `;
-
-const Image = styled.img`
-  border-radius: 3px;
-`;
