@@ -39,30 +39,12 @@ const FeaturedContainer = styled.div`
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 120px;
   flex-wrap: wrap;
 
   @media (max-width: 560px) {
     max-width: 500px;
     gap: 0;
-  }
-`;
-
-const FlexItem = styled.div`
-  color: #cbe4f5;
-  text-align: center;
-  margin-top: 30px;
-
-  h2 {
-    font-family: "pacifico";
-    color: #1ba098;
-    text-align: left;
-    margin-left: 20px;
-  }
-
-  p {
-    text-align: left;
-    margin-left: 20px;
   }
 `;
 
