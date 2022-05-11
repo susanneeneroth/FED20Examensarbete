@@ -4,25 +4,15 @@ import Link from "@frontity/components/link";
 import ImagePlaceholder from "../../assets/image_placeholder_small.png";
 import FeaturedMedia from "../featured-media";
 import { portfolioImages } from "../../data/portfolioImages";
+import ListItemPortfolio from "./list-item-portfolio";
 
 const PortfolioHome = ({ state, actions, libraries, item }) => {
-  const Html2React = libraries.html2react.Component;
-  // const author = state.source.author[item.author];
-  // const date = new Date(item.date);
-  // const fmedia = state.source.attachment[item.FeaturedMedia];
-
   useEffect(() => {
     actions.source.fetch("/category/portfolio");
   }, []);
 
-  // useEffect(() => {
-  //   actions.source.fetch("/portfolio-archive/");
-  // }, []);
-
   // Gets the data from portfolio category i Wordpress
   const data = state.source.get("/category/portfolio");
-  // const post = state.source[data.type][data.id];
-  // const fmediaId = post.featured_media;
 
   if (data.isCategory) {
     const category = state.source.category[data.id];
@@ -36,21 +26,12 @@ const PortfolioHome = ({ state, actions, libraries, item }) => {
           <hr />
           <StyledTitle>{category.name}</StyledTitle>
           <FlexPortfolioContainer>
-            {posts.slice(0, 3).map((p) => (
-              <FlexPortfolioItem key={p.id}>
-                {/* <FeaturedMedia id={item.featured_media} /> */}
-                {portfolioImages.map((item, i) => (
-                  <Image src={item.img} key={i} />
-                ))}
-                {/* <Image src={ImagePlaceholder} /> */}
+            {data.items.slice(0, 3).map(({ type, id }) => {
+              const item = state.source[type][id];
 
-                <Link link={p.link} key={p.id}>
-                  <h2>{p.title.rendered}</h2>
-
-                  <Html2React html={p.excerpt.rendered} />
-                </Link>
-              </FlexPortfolioItem>
-            ))}
+              // Render one Item component for each one.
+              return <ListItemPortfolio key={item.id} item={item} />;
+            })}
           </FlexPortfolioContainer>
         </PortfolioContainer>
       </>

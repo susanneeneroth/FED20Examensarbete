@@ -1,47 +1,27 @@
-import React, { useEffect } from "react";
-import { connect, styled, decode } from "frontity";
-import Link from "@frontity/components/link";
-import ImagePlaceholder from "../../assets/image_placeholder.png";
-// import FeaturedMedia from "../featured-media";
+import React from "react";
+import { connect, styled } from "frontity";
+import ListItemFeatured from "./list-item-featured";
 
 const FeaturedWork = ({ state, actions, libraries, item }) => {
-  const Html2React = libraries.html2react.Component;
-  // const author = state.source.author[item.author];
-  // const date = new Date(item.date);
+  // Get the data of the current list.
+  const data = state.source.get(state.router.link);
 
-  useEffect(() => {
-    actions.source.fetch("/category/featured");
-  }, []);
+  return (
+    <>
+      <StyledTitle>Featured Work</StyledTitle>
+      {/* Iterate over the items of the list. Max 3 blog items on frontpage */}
+      <FeaturedContainer>
+        <FlexContainer>
+          {data.items.slice(0, 4).map(({ type, id }) => {
+            const item = state.source[type][id];
 
-  // Gets the data from featured category i Wordpress
-  const data = state.source.get("/category/featured");
-
-  if (data.isCategory) {
-    const category = state.source.category[data.id];
-
-    const posts = data.items.map(({ type, id }) => state.source[type][id]);
-
-    return (
-      <>
-        <FeaturedContainer>
-          <StyledTitle>{category.name}</StyledTitle>
-          <FlexContainer>
-            {posts.slice(0, 4).map((p) => (
-              <FlexItem key={p.id}>
-                <Image src={ImagePlaceholder} />
-                <Link link={p.link} key={p.id}>
-                  <h2>{p.title.rendered}</h2>
-                  <Html2React html={p.excerpt.rendered} />
-                </Link>
-              </FlexItem>
-            ))}
-          </FlexContainer>
-        </FeaturedContainer>
-      </>
-    );
-  }
-
-  return null;
+            // Render one Item component for each one.
+            return <ListItemFeatured key={item.id} item={item} />;
+          })}
+        </FlexContainer>
+      </FeaturedContainer>
+    </>
+  );
 };
 
 export default connect(FeaturedWork);
