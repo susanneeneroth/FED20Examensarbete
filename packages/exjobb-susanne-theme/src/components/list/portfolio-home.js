@@ -59,7 +59,7 @@ const PortfolioContainer = styled.div`
 const FlexPortfolioContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   flex-wrap: wrap;
   margin-top: 20px;
 
@@ -74,8 +74,4 @@ const StyledTitle = styled.h1`
   font-family: "pacifico";
   margin: auto;
   text-align: center;
-`;
-
-const Image = styled.img`
-  border-radius: 3px;
 `;

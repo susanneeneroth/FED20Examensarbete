@@ -54,6 +54,7 @@ const FlexItem = styled.div`
 
   img {
     border-radius: 5px;
+    width: 459px;
   }
 `;
 

@@ -23,9 +23,9 @@ const Header = ({ state }) => {
           <Nav />
         </Menu>
 
-        <Right>
+        {/* <Right>
           <img src={ToggleButton} width="20px" />
-        </Right>
+        </Right> */}
         <MobileMenu />
       </Navigation>
     </Container>
