@@ -1,57 +1,48 @@
 const settings = {
-  "name": "frontity",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "fed20-exjobb",
+  state: {
+    frontity: {
+      url: "http://localhost:10023",
+      title: "Susanne Eneroth",
+      description: "",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/mars-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
-          ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+      name: "exjobb-susanne-theme",
+      state: {
+        theme: {
+          menu: [],
+          featured: {
+            showOnList: true,
+            showOnPost: true,
+          },
+        },
+      },
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "http://localhost:10023",
+          postTypes: [
+            {
+              type: "more-work",
+              endpoint: "more-work",
+              archive: "/portfolio-archive",
+            },
+          ],
+          postsPage: "Blog",
+          params: {
+            per_page: 10,
+          },
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+    "@aamodtgroup/frontity-contact-form-7",
+  ],
 };
 
 export default settings;
