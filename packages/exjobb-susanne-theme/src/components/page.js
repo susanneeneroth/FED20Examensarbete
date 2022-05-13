@@ -24,18 +24,20 @@ const Container = styled.div`
   background-color: #001f33;
   height: auto;
   width: 1140px;
-  padding-top: 30px;
+  color: #cbe4f5;
+  padding: 30px 0 40px 0;
 `;
 
 const Content = styled.section`
   height: auto;
   width: 840px;
   margin: auto;
-  padding: 10px 10px 30px 30px;
   color: #869ba9;
 
   h2 {
-    margin-top: 0;
+    text-align: center;
+    /* margin-top: 40px; vid bild */
+    margin-bottom: 5px;
     font-family: "pacifico";
     color: #1ba098;
   }

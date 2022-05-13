@@ -51,6 +51,5 @@ const FlexContainer = styled.div`
 const StyledTitle = styled.h1`
   color: #1ba098;
   font-family: "pacifico";
-  margin: auto;
   text-align: center;
 `;

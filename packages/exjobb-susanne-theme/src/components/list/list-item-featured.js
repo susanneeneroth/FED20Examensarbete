@@ -38,7 +38,7 @@ const Excerpt = styled.div`
 const FlexItem = styled.div`
   color: #cbe4f5;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
   h2 {
     font-family: "pacifico";
@@ -47,24 +47,18 @@ const FlexItem = styled.div`
     margin-left: 20px;
   }
 
+  h2:hover {
+    color: #1ba098;
+  }
+
   p {
     text-align: left;
-    margin-left: 20px;
+    margin-left: 25px;
   }
 
   img {
-    border-radius: 5px;
-    width: 459px;
+    border-radius: 2px;
+    width: 520px;
+    height: 370px;
   }
-`;
-
-const StyledTitle = styled.h1`
-  color: #1ba098;
-  font-family: "pacifico";
-  margin: auto;
-  text-align: center;
-`;
-
-const Image = styled.img`
-  border-radius: 3px;
 `;

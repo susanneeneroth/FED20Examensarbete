@@ -39,24 +39,33 @@ const Post = ({ state, libraries, actions }) => {
 const PostContainer = styled.div`
   height: auto;
   width: 1140px;
-  padding-top: 30px;
   color: #cbe4f5;
-  padding: 10px 0 20px 0;
+  padding: 30px 0 40px 0;
 `;
 
 const PostContent = styled.div`
   height: auto;
   width: 840px;
   margin: auto;
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-family: "pacifico";
+    color: #1ba098;
+  }
 `;
 
 const PostInfo = styled.div`
-  background-image: linear-gradient(to right, pink, #fff);
   margin-bottom: 1em;
   padding: 0.5em;
-  border-left: 4px solid lightseagreen;
   font-size: 0.8em;
-  color: #001827;
+  font-style: italic;
+  color: #cbe4f5;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 40px;
 
   & > p {
     margin: 0;

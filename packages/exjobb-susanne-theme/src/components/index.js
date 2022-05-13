@@ -67,6 +67,9 @@ const globalStyles = css`
     color: inherit;
     text-decoration: none;
   }
+  a:hover {
+    color: #1ba098;
+  }
 `;
 
 const Container = styled.div`

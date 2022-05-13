@@ -60,7 +60,7 @@ const ContactForm = styled.div`
     color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-top: 5px;
     margin-bottom: 15px;
   }
@@ -70,7 +70,7 @@ const ContactForm = styled.div`
     color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-top: 5px;
     margin-bottom: -10px;
   }
@@ -84,7 +84,7 @@ const ContactForm = styled.div`
     color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-top: 5px;
     margin-bottom: 4px;
   }
@@ -93,7 +93,7 @@ const ContactForm = styled.div`
     background-color: #d65079;
     padding: 10px 15px;
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #fff;
     margin-top: 0;
     position: relative;

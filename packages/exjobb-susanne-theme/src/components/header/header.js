@@ -41,7 +41,7 @@ const Container = styled.div`
 `;
 
 const Navigation = styled.div`
-  width: 1140px;
+  width: 1100px;
   max-width: 100%;
   box-sizing: border-box;
   padding-top: 10px;
@@ -67,6 +67,7 @@ export const StyledLink = styled(Link)`
 
 const Logo = styled.div`
   height: 40px;
+  margin-left: 50px;
 `;
 
 // const Title = styled.h2`

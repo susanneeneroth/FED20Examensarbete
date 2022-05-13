@@ -54,7 +54,7 @@ const FlexPortfolioItem = styled.div`
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 2px;
     max-width: 295px;
   }
 `;
