@@ -55,7 +55,7 @@ const CloudOne = styled.div`
 const CloudTwo = styled.div`
   position: absolute;
   top: 320px;
-  left: 830px;
+  left: 1000px;
 
   @media (max-width: 560px) {
     left: 320px;
