@@ -121,7 +121,7 @@ const ContactForm = styled.div`
     .wpcf7-form input[type="submit"] {
       position: relative;
       top: -30px;
-      left: 90px;
+      left: 110px;
     }
   }
 `;

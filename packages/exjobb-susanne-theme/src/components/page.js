@@ -41,6 +41,10 @@ const Content = styled.section`
     font-family: "pacifico";
     color: #1ba098;
   }
+
+  @media (max-width: 560px) {
+    max-width: 500px;
+  }
 `;
 
 export default connect(Page);

@@ -55,6 +55,10 @@ const PostContent = styled.div`
     font-family: "pacifico";
     color: #1ba098;
   }
+
+  @media (max-width: 560px) {
+    max-width: 500px;
+  }
 `;
 
 const PostInfo = styled.div`
