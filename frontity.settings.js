@@ -2,7 +2,7 @@ const settings = {
   name: "fed20-exjobb",
   state: {
     frontity: {
-      url: "https://www.susanneeneroth.se/",
+      url: "https://susanneeneroth.se/",
       title: "Susanne Eneroth",
       description: "",
     },
@@ -24,7 +24,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://www.susanneeneroth.se/",
+          url: "https://susanneeneroth.se/",
           postTypes: [
             {
               type: "more-work",
